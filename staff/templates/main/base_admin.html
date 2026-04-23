@@ -1,0 +1,504 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{% block title %}Admin{% endblock %}</title>
+
+<!-- Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<style>
+
+.dashboard-card {
+    transition: 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.custom-table-head th{
+    background:#0f1b2d;
+    color:white;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html, body{
+    margin:0;
+    padding:0;
+}
+
+/* MOBILE VERSION (screens below 768px) */
+@media (max-width: 768px) {
+
+    /* sidebar becomes hidden on mobile */
+    .sidebar {
+        left: -230px;
+        transition: 0.3s ease;
+    }
+
+    /* navbar full width (already OK) */
+    .navbar {
+        left: 0;
+        width: 100%;
+    }
+
+    /* main content full width din */
+    .main {
+        margin-left: 0;
+    }
+
+    /* mobile padding */
+    .content {
+        padding: 15px 20px;
+    }
+}
+/* Global Layout */
+body{
+    margin:0;
+    font-family:Segoe UI, sans-serif;
+    background:#f4f6fb;
+    overflow-x:hidden;
+}
+
+/* NAVBAR – FULL WIDTH ON TOP */
+.navbar{
+    background:#0f1b2d;
+    color:white;
+    height:60px;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;   /* ADD THIS */
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 25px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    z-index:1000;
+    border-radius:0;
+}
+
+.nav-left h3{
+    margin:0;
+    font-weight:500;
+}
+
+.company{
+    font-size:12px;
+    color:#9ca3af;
+}
+
+
+/* NAV TITLE IMPROVED */
+.nav-left {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.nav-left h3 {
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:2px;
+}
+
+.nav-logo {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: white;
+    padding: 4px;
+}
+
+.company {
+    font-size:13px;
+    color:#cbd5e1;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-top:-2px;
+    opacity:0.9;
+}
+
+.company i {
+    font-size:12px;
+    opacity:0.8;
+}
+
+/* SIDEBAR – NOW BELOW NAVBAR */
+.sidebar{
+    width:230px;
+    background:#0f1b2d;
+    color:white;
+    position:fixed;
+    top:60px;                 /* sidebar starts UNDER the navbar */
+    left:0;
+    min-height:calc(100vh - 60px);
+    padding:25px 20px;
+}
+
+.sidebar h2{
+    margin-bottom:30px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.sidebar a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:#cbd5e1;
+    padding:12px;
+    border-radius:6px;
+    margin-bottom:6px;
+    transition:0.2s;
+    font-size:14px;
+}
+
+.sidebar a:hover{
+    background:#1e293b;
+    color:white;
+}
+
+/* SIDEBAR LINKS */
+.sidebar a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:#cbd5e1;
+    padding:12px;
+    border-radius:6px;
+    margin-bottom:6px;
+    transition:0.25s;
+    font-size:14px;
+}
+
+/* HOVER EFFECT */
+.sidebar a:hover{
+    background:#2563eb; /* BLUE */
+    color:white;
+}
+
+/* ACTIVE PAGE */
+.sidebar a.active{
+    background:#2563eb;
+    color:white;
+    font-weight:600;
+}
+
+/* MAIN CONTENT */
+.main{
+    margin-left:230px;          /* space for sidebar */
+    padding-top:60px;           /* space for navbar */
+}
+
+.content{
+    padding:30px 35px;          /* CLEAN SPACING (not dikit) */
+}
+
+.nav-avatar{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #ffffff;
+}
+
+.welcome-text{
+    font-weight:500;
+}
+
+.logo-title {
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.text-group {
+    display:flex;
+    flex-direction:column;
+}
+
+.text-group h3 {
+    font-size:22px;
+    font-weight:700;
+    margin:0;
+}
+
+.company {
+    font-size:13px;
+    color:#cbd5e1;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-top:3px;
+    opacity:0.9;
+}
+
+.company i {
+    font-size:12px;
+    opacity:0.8;
+}
+
+.logout-link {
+    color: #dc3545; /* red */
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.logout-link {
+    color: #dc3545 !important;  /* force red */
+}
+
+.logout-link span {
+    color: #dc3545 !important;
+}
+
+.logout-link i {
+    color: #dc3545;
+}
+
+.logout-link:hover {
+    background-color: rgba(220, 53, 69, 0.1); /* light red hover */
+    color: #ff4d5a;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        {% load static %}
+
+        <div class="nav-left">
+            <div class="logo-title">
+                <img src="{% static 'images/p77_logo.png' %}" alt="P77 Logo" class="nav-logo">
+                <div class="text-group">
+                    <h3>Dashboard</h3>
+                    <div class="company">
+                        <i class="fa-solid fa-building"></i>
+                        P77 Petroleum Distribution Inc.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-right d-flex align-items-center gap-3">
+
+            <div class="dropdown">
+                <!-- Bell Button -->
+                <a href="#" class="position-relative text-decoration-none"
+                   data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bell" style="font-size:26px; color:#facc15;"></i>
+                    {% if unread_count > 0 %}
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                              style="font-size:10px;">
+                            {{ unread_count }}
+                        </span>
+                    {% endif %}
+                </a>
+
+                <!-- Dropdown Menu -->
+                <div class="dropdown-menu dropdown-menu-end p-0 shadow"
+                     style="width:320px; max-height:400px; overflow-y:auto; border-radius:12px;">
+
+                    <!-- Header -->
+                    <div class="d-flex justify-content-between align-items-center px-3 py-2"
+                         style="background:#0f1b2d; border-radius:12px 12px 0 0;">
+                        <span class="text-white fw-bold" style="font-size:14px;">
+                            🔔 Notifications
+                        </span>
+                        {% if unread_count > 0 %}
+                        <form method="POST" action="{% url 'adminpanel:mark_all_as_read' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-sm text-warning p-0"
+                                    style="font-size:11px; background:none; border:none;">
+                                Mark all as read
+                            </button>
+                        </form>
+                        {% endif %}
+                    </div>
+
+                    <!-- Notification Items -->
+                    {% for notif in notifications %}
+                    <div class="px-3 py-2 border-bottom
+                                {% if not notif.is_read %}bg-light{% endif %}"
+                         style="font-size:13px;">
+
+                        <div class="d-flex justify-content-between">
+                            <span>{{ notif.message }}</span>
+                            {% if not notif.is_read %}
+                                <span class="badge bg-warning text-dark ms-2" style="font-size:10px; height:fit-content;">New</span>
+                            {% endif %}
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mt-1">
+                            <small class="text-muted">{{ notif.created_at|date:"M d, Y h:i A" }}</small>
+                            {% if not notif.is_read %}
+                            <form method="POST" action="{% url 'adminpanel:mark_as_read' notif.id %}">
+                                {% csrf_token %}
+                                <button type="submit"
+                                        class="btn p-0 text-primary"
+                                        style="font-size:11px; background:none; border:none;">
+                                    Mark as read
+                                </button>
+                            </form>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                    {% empty %}
+                    <div class="text-center text-muted py-4" style="font-size:13px;">
+                        No notifications yet 🔕
+                    </div>
+                    {% endfor %}
+
+                    <!-- Footer -->
+                    <div class="text-center py-2" style="border-radius:0 0 12px 12px; background:#f8f9fa;">
+                        <a href="{% url 'adminpanel:notifications' %}" class="text-primary" style="font-size:12px;">
+                            View all notifications
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+</div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>P77 Admin</h2>
+
+        <a href="{% url 'adminpanel:admin_dashboard' %}"
+           class="{% if request.resolver_match.url_name == 'admin_dashboard' %}active{% endif %}">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+        </a>
+
+        <a href="{% url 'adminpanel:user_list' %}"
+           class="{% if request.resolver_match.url_name == 'user_list' %}active{% endif %}">
+            <i class="fa-solid fa-user"></i>
+            User List
+        </a>
+
+        {% if not request.user.role == 'viewer' %}
+            <a href="{% url 'adminpanel:add_cluster' %}"
+               class="{% if request.resolver_match.url_name == 'add_cluster' %}active{% endif %}">
+                <i class="fa-solid fa-layer-group"></i>
+                Add Cluster
+            </a>
+
+            <a href="{% url 'adminpanel:add_station' %}"
+               class="{% if request.resolver_match.url_name == 'add_station' %}active{% endif %}">
+                <i class="fa-solid fa-plus"></i>
+                Add Station
+            </a>
+
+            <a href="{% url 'adminpanel:assign_user' %}"
+               class="{% if request.resolver_match.url_name == 'assign_user' %}active{% endif %}">
+                <i class="fa-solid fa-user-plus"></i>
+                Assign User
+            </a>
+         {% endif %}
+
+
+        <a href="{% url 'adminpanel:station_list' %}"
+           class="{% if request.resolver_match.url_name == '#' %}active{% endif %}">
+            <i class="fa-solid fa-gas-pump"></i>
+            Station List
+        </a>
+
+        <a href="{% url 'adminpanel:all_reports' %}"
+           class="{% if request.resolver_match.url_name == 'all_reports' %}active{% endif %}">
+            <i class="fa-solid fa-folder"></i>
+            All Reports
+        </a>
+
+
+
+        <a href="{% url 'account:logout' %}"
+           class="logout-link {% if request.resolver_match.url_name == 'logout' %}active{% endif %}">
+           <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+        <div class="content">
+            {% if messages %}
+            <div class="position-fixed start-50 translate-middle-x p-3" style="top: 70px; z-index: 1080;" style="z-index: 1080;">
+              {% for message in messages %}
+                <div class="toast align-items-center border-0 text-white
+                            {% if message.tags == 'success' %}bg-success
+                            {% elif message.tags == 'error' or message.tags == 'danger' %}bg-danger
+                            {% elif message.tags == 'warning' %}bg-warning text-dark
+                            {% elif message.tags == 'info' %}bg-info
+                            {% else %}bg-secondary
+                            {% endif %}"
+                     role="alert" aria-live="assertive" aria-atomic="true"
+                     data-bs-delay="3000">
+
+                  <div class="d-flex">
+                    <div class="toast-body">
+                      {{ message }}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                            data-bs-dismiss="toast"></button>
+                  </div>
+
+                </div>
+              {% endfor %}
+            </div>
+            {% endif %}
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toastElList = document.querySelectorAll('.toast');
+    toastElList.forEach(function(toastEl) {
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
+    });
+});
+</script>
+
+</body>

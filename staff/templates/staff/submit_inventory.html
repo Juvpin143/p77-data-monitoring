@@ -1,0 +1,226 @@
+{% extends "main/base_staff.html" %}
+
+{% block title %}Submit Sale{% endblock %}
+
+{% block content %}
+
+<style>
+
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Remove arrows in Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    /* Control column widths */
+    .cm-col {
+        width: 40%;
+    }
+
+    .liters-col {
+        width: 55%;
+    }
+
+    /* Make inputs fill their column */
+    .table input {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    /* T1 input highlight (BLACK) */
+    .t-row input {
+        border: 2px solid #000 !important;
+        font-weight: bold;
+    }
+
+
+    .t1-row input {
+        border: 2px solid #ffc107;
+        font-weight: bold;
+    }
+
+    .t-row input {
+        font-weight: bold;
+    }
+</style>
+
+<div class="container-fluid mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+
+            <div class="card shadow-lg border-0">
+
+                <div class="card-header text-white text-center"
+                     style="background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);">
+
+                    <h4>⛽ Submit Fuel Inventory</h4>
+                    <small>P77 Petroleum Distribution Inc.</small>
+
+                </div>
+
+                <div class="card-body">
+
+                    <form method="POST">
+                    {% csrf_token %}
+
+                    <div class="row">
+
+                        <!-- PREMIUM -->
+                        {% if has_premium %}
+                        <div class="col-md-4">
+                            <div class="card h-100 border-danger">
+                                <div class="card-header bg-danger text-white text-center">Premium</div>
+                                <div class="card-body">
+                                    <table class="table table-bordered text-center align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th class="cm-col">CM (dipstick)</th>
+                                                <th class="liters-col">Liters</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% if "T1" in premium_tanks %}
+                                            <tr class="t-row">
+                                                <td><strong>T1</strong></td>
+                                                <td><input type="number" name="premium_t1_cm" class="form-control"></td>
+                                                <td><input type="number" name="premium_t1_liters" class="form-control"></td>
+                                            </tr>
+                                            {% endif %}
+                                            {% if "T2" in premium_tanks %}
+                                            <tr class="t-row">
+                                                <td><strong>T2</strong></td>
+                                                <td><input type="number" name="premium_t2_cm" class="form-control"></td>
+                                                <td><input type="number" name="premium_t2_liters" class="form-control"></td>
+                                            </tr>
+                                            {% endif %}
+                                            {% if "T3" in premium_tanks %}
+                                            <tr class="t-row">
+                                                <td><strong>T3</strong></td>
+                                                <td><input type="number" name="premium_t3_cm" class="form-control"></td>
+                                                <td><input type="number" name="premium_t3_liters" class="form-control"></td>
+                                            </tr>
+                                            {% endif %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- REGULAR -->
+                        {% if has_regular %}
+                        <div class="col-md-4">
+                            <div class="card h-100 border-success">
+                                <div class="card-header bg-success text-white text-center">Regular</div>
+                                <div class="card-body">
+                                    <table class="table table-bordered text-center align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th class="cm-col">CM (dipstick)</th>
+                                                <th class="liters-col">Liters</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% if "T1" in regular_tanks %}
+                                            <tr class="t-row">
+                                                <td><strong>T1</strong></td>
+                                                <td><input type="number" name="regular_t1_cm" class="form-control"></td>
+                                                <td><input type="number" name="regular_t1_liters" class="form-control"></td>
+                                            </tr>
+                                            {% endif %}
+                                            {% if "T2" in regular_tanks %}
+                                            <tr class="t-row">
+                                                <td><strong>T2</strong></td>
+                                                <td><input type="number" name="regular_t2_cm" class="form-control"></td>
+                                                <td><input type="number" name="regular_t2_liters" class="form-control"></td>
+                                            </tr>
+                                            {% endif %}
+                                            {% if "T3" in regular_tanks %}
+                                            <tr class="t-row">
+                                                <td><strong>T3</strong></td>
+                                                <td><input type="number" name="regular_t3_cm" class="form-control"></td>
+                                                <td><input type="number" name="regular_t3_liters" class="form-control"></td>
+                                            </tr>
+                                            {% endif %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <!-- DIESEL -->
+                        {% if has_diesel %}
+                        <div class="col-md-4">
+                            <div class="card h-100 border-warning">
+                                <div class="card-header bg-warning text-white text-center">Diesel</div>
+                                <div class="card-body">
+                                    <table class="table table-bordered text-center align-middle">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th class="cm-col">CM (dipstick)</th>
+                                                <th class="liters-col">Liters</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% if "T1" in diesel_tanks %}
+                                            <tr class="t-row">
+                                                <td><strong>T1</strong></td>
+                                                <td><input type="number" name="diesel_t1_cm" class="form-control"></td>
+                                                <td><input type="number" name="diesel_t1_liters" class="form-control"></td>
+                                            </tr>
+                                            {% endif %}
+                                            {% if "T2" in diesel_tanks %}
+                                            <tr class="t-row">
+                                                <td><strong>T2</strong></td>
+                                                <td><input type="number" name="diesel_t2_cm" class="form-control"></td>
+                                                <td><input type="number" name="diesel_t2_liters" class="form-control"></td>
+                                            </tr>
+                                            {% endif %}
+                                            {% if "T3" in diesel_tanks %}
+                                            <tr class="t-row">
+                                                <td><strong>T3</strong></td>
+                                                <td><input type="number" name="diesel_t3_cm" class="form-control"></td>
+                                                <td><input type="number" name="diesel_t3_liters" class="form-control"></td>
+                                            </tr>
+                                            {% endif %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                    </div>
+
+                    <button class="btn btn-primary w-100 mt-3">
+                        Submit Inventory
+                    </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+.table input {
+    text-align: center;
+    font-size: 14px;
+}
+</style>
+
+{% endblock %}

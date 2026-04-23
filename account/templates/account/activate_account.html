@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Activate Account</title>
+</head>
+
+<body style="margin:0; padding:0; background-color:#f4f6f9; font-family:Arial, sans-serif;">
+
+<table width="100%" cellpadding="0" cellspacing="0" style="padding:20px 0;">
+<tr>
+<td align="center">
+
+<table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border-radius:12px; overflow:hidden;">
+
+<!-- HEADER -->
+<tr>
+<td align="center" style="background:linear-gradient(90deg,#007bff,#00c6ff); padding:40px 20px;">
+
+    <!-- LOGO -->
+    <img src="cid:p77_logo" width="90" height="90" style="border-radius:50%; background:#ffffff; padding:10px;">
+
+    <h1 style="color:#ffffff; margin:15px 0 0 0; font-size:22px;">
+        P77 Data Monitoring
+    </h1>
+</td>
+</tr>
+
+<!-- BODY -->
+<tr>
+<td style="padding:40px 30px; text-align:center;">
+
+    <h2 style="margin:0 0 10px 0; color:#333;">
+        Hello {{ user.username }} 👋
+    </h2>
+
+    <p style="color:#555; font-size:15px; line-height:1.6; text-bold">
+        Welcome to P77 Stations Inventory Monitoring!
+    </p>
+
+   <p style="color:#555; font-size:15px; line-height:1.6;">
+        Stay active and ensure your fuel inventory is always updated in real time for accurate monitoring.
+    </p>
+
+    <p style="color:#555; font-size:15px;">
+        Please confirm your email address to activate your account:
+    </p>
+
+    <!-- BUTTON -->
+    <a href="http://{{ domain }}{% url 'account:activate' uidb64=uid token=token %}"
+       style="display:inline-block; margin-top:25px; padding:14px 30px; background:#007bff; color:#ffffff; text-decoration:none; border-radius:8px; font-weight:bold;">
+        Activate My Account
+    </a>
+
+    <p style="margin-top:25px; font-size:13px; color:#888;">
+        If the button does not work, copy and paste this link:
+        <br><br>
+        http://{{ domain }}{% url 'account:activate' uidb64=uid token=token %}
+    </p>
+
+</td>
+</tr>
+
+<!-- FOOTER -->
+<tr>
+<td align="center" style="background:#f1f1f1; padding:20px; font-size:12px; color:#777;">
+    © {% now "Y" %} P77 Data Monitoring<br>
+    This is an automated email. Please do not reply.
+</td>
+</tr>
+
+</table>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

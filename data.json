@@ -1,0 +1,5793 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-03-21T00:44:24.872Z",
+    "user": 6,
+    "content_type": 6,
+    "object_id": "46",
+    "object_repr": "Station 2 | Diesel | 2026-03-21",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is read\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-03-21T00:44:34.860Z",
+    "user": 6,
+    "content_type": 6,
+    "object_id": "44",
+    "object_repr": "Station 2 | Premium | 2026-03-19",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Is read\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-03-25T01:28:41.138Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "North Negros Area",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-03-25T07:21:06.494Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Station 2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cluster\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-03-25T07:25:05.770Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Bacolod Area",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-03-25T07:25:17.470Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "North Negros Area",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-03-25T07:26:18.737Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "C - North Negros Area",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-03-26T02:00:48.089Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "City Gas 77 Cadiz",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-03-26T02:25:30.036Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "P77 Alijis",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cluster\", \"Name\", \"Tank capacity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-03-26T02:27:42.909Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "C - North Negros Area",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-03-26T02:28:20.976Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "B - Bacolod Area",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-03-26T06:13:33.604Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "C - South Negros Area",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-03-26T06:13:51.249Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "C - South Negros Area",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-03-26T06:14:16.141Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "C - North Negros Area",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-03-26T06:14:16.141Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "C - North Negros Area",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-03-26T06:15:01.668Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Station 7",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-03-26T06:15:01.668Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Station 6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-03-26T06:15:01.668Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Station 5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-03-26T06:16:18.373Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Valladolid Crossing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-03-26T06:16:28.675Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Valladolid Crossing",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cluster\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-03-26T06:18:00.134Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "77 Sagay",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-03-26T06:54:09.145Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "77 Sagay",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tank capacity\", \"Regular capacity\", \"Diesel capacity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-03-26T06:54:59.604Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "City Gas 77 Cadiz",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Regular capacity\", \"Diesel capacity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-03-28T01:30:05.011Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Magic Gas Station San Carlos",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-03-28T01:33:57.289Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "MG Prime San Carlos",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-03-28T01:38:39.963Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "P77 Alijis",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Premium capacity\", \"Regular capacity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-03-28T01:40:15.379Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "P77 La Salle",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-03-28T01:40:58.146Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "PG Granada",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-03-28T01:44:09.169Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "City Gas 77 Greensville",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-03-28T01:45:16.812Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "15",
+    "object_repr": "City Gas 77 Murcia",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-03-28T01:46:57.338Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "16",
+    "object_repr": "PG Talisay",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-03-28T02:07:11.136Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "17",
+    "object_repr": "P77 Valladolid (small)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-03-28T02:08:10.887Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "18",
+    "object_repr": "PG Bago",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-03-28T05:47:01.330Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "19",
+    "object_repr": "PG Marayo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-03-28T05:51:45.204Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "20",
+    "object_repr": "GTN Bocar Hinigaran T1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-03-28T05:52:42.003Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "21",
+    "object_repr": "GTN Bocar Hinigaran T2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-03-28T05:54:13.967Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "22",
+    "object_repr": "PG Hinigaran T1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-03-28T05:55:28.229Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "23",
+    "object_repr": "PG Hinigaran T2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-03-30T01:13:03.568Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "D - LC Canlaon Area",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-03-31T00:52:58.132Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Nonoy",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Station\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-03-31T00:55:59.968Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Nonoy",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-03-31T00:57:37.857Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Jerome",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Station\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-03-31T08:04:57.515Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Juven",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Role\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-04-05T08:27:23.987Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "26",
+    "object_repr": "Station Nonoy",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2026-04-05T08:27:23.987Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "25",
+    "object_repr": "Station Jerome",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2026-04-05T08:27:23.987Z",
+    "user": 6,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Station 4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2026-04-09T05:53:05.709Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "11",
+    "object_repr": "H - Oriental Area",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2026-04-09T05:53:05.709Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "10",
+    "object_repr": "I - Oriental Area",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2026-04-09T05:54:30.217Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "12",
+    "object_repr": "G - Tabu Area",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Code\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2026-04-09T05:56:27.111Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "13",
+    "object_repr": "H - Lower South Negros Area",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Code\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2026-04-09T06:02:40.777Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "14",
+    "object_repr": "I - South Oriental Area",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2026-04-09T06:03:31.842Z",
+    "user": 6,
+    "content_type": 11,
+    "object_id": "15",
+    "object_repr": "J - North Oriental Area",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2026-04-15T05:57:58.332Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Juven01",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2026-04-15T06:13:16.883Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Juven01",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2026-04-15T06:30:16.600Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Juven01",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2026-04-15T06:35:03.033Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "Juven01",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2026-04-15T06:38:14.083Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Juven01",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2026-04-16T07:40:23.603Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "23",
+    "object_repr": "Juven10",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2026-04-16T07:59:52.230Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "24",
+    "object_repr": "Juven10",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2026-04-17T00:29:44.266Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "25",
+    "object_repr": "Juven10",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2026-04-17T00:31:51.077Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "26",
+    "object_repr": "Juven10",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2026-04-17T00:46:52.976Z",
+    "user": 6,
+    "content_type": 8,
+    "object_id": "27",
+    "object_repr": "Juven10",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add fuel sale",
+    "content_type": 6,
+    "codename": "add_fuelsale"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change fuel sale",
+    "content_type": 6,
+    "codename": "change_fuelsale"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete fuel sale",
+    "content_type": 6,
+    "codename": "delete_fuelsale"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view fuel sale",
+    "content_type": 6,
+    "codename": "view_fuelsale"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add station",
+    "content_type": 7,
+    "codename": "add_station"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change station",
+    "content_type": 7,
+    "codename": "change_station"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete station",
+    "content_type": 7,
+    "codename": "delete_station"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view station",
+    "content_type": 7,
+    "codename": "view_station"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 8,
+    "codename": "add_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 8,
+    "codename": "change_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 8,
+    "codename": "delete_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 8,
+    "codename": "view_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add fuel price",
+    "content_type": 9,
+    "codename": "add_fuelprice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change fuel price",
+    "content_type": 9,
+    "codename": "change_fuelprice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete fuel price",
+    "content_type": 9,
+    "codename": "delete_fuelprice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view fuel price",
+    "content_type": 9,
+    "codename": "view_fuelprice"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add profile",
+    "content_type": 10,
+    "codename": "add_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change profile",
+    "content_type": 10,
+    "codename": "change_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete profile",
+    "content_type": 10,
+    "codename": "delete_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view profile",
+    "content_type": 10,
+    "codename": "view_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add fuel inventory",
+    "content_type": 6,
+    "codename": "add_fuelinventory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change fuel inventory",
+    "content_type": 6,
+    "codename": "change_fuelinventory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete fuel inventory",
+    "content_type": 6,
+    "codename": "delete_fuelinventory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view fuel inventory",
+    "content_type": 6,
+    "codename": "view_fuelinventory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add cluster",
+    "content_type": 11,
+    "codename": "add_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change cluster",
+    "content_type": 11,
+    "codename": "change_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete cluster",
+    "content_type": 11,
+    "codename": "delete_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view cluster",
+    "content_type": 11,
+    "codename": "view_cluster"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add notification",
+    "content_type": 12,
+    "codename": "add_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change notification",
+    "content_type": 12,
+    "codename": "change_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete notification",
+    "content_type": 12,
+    "codename": "delete_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view notification",
+    "content_type": 12,
+    "codename": "view_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add station dispatch",
+    "content_type": 13,
+    "codename": "add_stationdispatch"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change station dispatch",
+    "content_type": 13,
+    "codename": "change_stationdispatch"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete station dispatch",
+    "content_type": 13,
+    "codename": "delete_stationdispatch"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view station dispatch",
+    "content_type": 13,
+    "codename": "view_stationdispatch"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "staff",
+    "model": "fuelinventory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "account",
+    "model": "station"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "account",
+    "model": "customuser"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "staff",
+    "model": "fuelprice"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "staff",
+    "model": "profile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "account",
+    "model": "cluster"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "staff",
+    "model": "notification"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "staff",
+    "model": "stationdispatch"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "221pw68ck8qyn8wb5zlillnrvk6llk5y",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHQhUI9eu83kGVZpGpoUtqT8d9tkx70Npn3Zt4i4LaWsDVewpTEVfTi8ttFpCfXA6QH1vssaa7rMkV5KPKkTY5z4tftdP8OCrayr7OimDKQI4-sIJPLprcKsQMgcIOKeo_ReWb2A4MxBBkgd9pGi1aLzxcLlzhV:1w77Yr:EjDTsyHfH2x4WGULGPWjuZQi5kruznPyy0Skxas5MEA",
+    "expire_date": "2026-04-13T08:01:25.712Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5pf23zmecwxf6zlm7ykv8gtgztll0ro1",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKtBSX7j0DmWFmpGpoUtqV8e7apAvd_vfef6kE21rS1nhJE6mz8ur0uyHkB9cd0B3qbdZ5rusyod4VfdCmrzPx83K4fwcFWvnWFo1DcCgd9pYNE44Ys49OiDJSlEFsYNuNEgP63hHZgTMwBO_FBFDvDxnJOVA:1vzmYg:i4DydfUKB-jU-oVbvL01wMFjlPDJAcNSxiYMvktvlk8",
+    "expire_date": "2026-03-24T02:10:54.524Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "5q3ucbpuozi2xs71e0clsnpi66zwdx9e",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHQhUI9eu83kGVZpGpoUtqT8d9tkx70Npn3Zt4i4LaWsDVewpTEVfTi8ttFpCfXA6QH1vssaa7rMkV5KPKkTY5z4tftdP8OCrayr7OimDKQI4-sIJPLprcKsQMgcIOKeo_ReWb2A4MxBBkgd9pGi1aLzxcLlzhV:1w7So3:gwOXqGbt20Kj_S0OVs3QeQHxYxaM7KrPTpheePN0pqk",
+    "expire_date": "2026-04-14T06:42:31.933Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "65wbz1hnkp0lyjiv22t1i2inpc1so77x",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHQhUI9eu83kGVZpGpoUtqT8d9tkx70Npn3Zt4i4LaWsDVewpTEVfTi8ttFpCfXA6QH1vssaa7rMkV5KPKkTY5z4tftdP8OCrayr7OimDKQI4-sIJPLprcKsQMgcIOKeo_ReWb2A4MxBBkgd9pGi1aLzxcLlzhV:1w7T3c:0nPYgXZQKqE2WXvPkOJg7SsMZviMrM8vofvrhwj2dWY",
+    "expire_date": "2026-04-14T06:58:36.541Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dg9fx0vee91cbyi9zjsl9273mqgtsj8h",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQAP_C2ZClFLZ49N43NCwsUjWQlPZk_Lsh6UGvM5N5i8Ufe16OxtuyRnEVKC6_jHx4cukiPny5Vxlq2beVZE_kaZuca-TX7Wz_Btm33LdEbL1WbopECSExKIYBwBKaaE1IEwRwrPUYDDKMxlhkpwARWQ9JfL7thzd5:1wDdjg:zZ1JJ-wYetotRZ64I875PV6KHZeJaFQJyQXQoqpNp54",
+    "expire_date": "2026-05-01T07:35:32.449Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fa2z2eai6ndniq346b0idxd1mh69vktw",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHQhUI9eu83kGVZpGpoUtqT8d9tkx70Npn3Zt4i4LaWsDVewpTEVfTi8ttFpCfXA6QH1vssaa7rMkV5KPKkTY5z4tftdP8OCrayr7OimDKQI4-sIJPLprcKsQMgcIOKeo_ReWb2A4MxBBkgd9pGi1aLzxcLlzhV:1w7pwZ:FIykvwJGGSktjOd5M9aBZ5LbeSnhVHROaPeFbJZOFU4",
+    "expire_date": "2026-04-15T07:24:51.121Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fy8dg6rgcn7ax0as31wgmul8bz1ghqd6",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKtBSX7j0DmWFmpGpoUtqV8e7apAvd_vfef6kE21rS1nhJE6mz8ur0uyHkB9cd0B3qbdZ5rusyod4VfdCmrzPx83K4fwcFWvnWFo1DcCgd9pYNE44Ys49OiDJSlEFsYNuNEgP63hHZgTMwBO_FBFDvDxnJOVA:1w07Hh:tzR3uUAzss6NjwMI7LbgeVnjCL8wYL1RMdfpMBjSoBQ",
+    "expire_date": "2026-03-25T00:18:45.275Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gfirug6sqxzpigkx2eb8hdxqjpqjx74a",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKtBSX7j0DmWFmpGpoUtqV8e7apAvd_vfef6kE21rS1nhJE6mz8ur0uyHkB9cd0B3qbdZ5rusyod4VfdCmrzPx83K4fwcFWvnWFo1DcCgd9pYNE44Ys49OiDJSlEFsYNuNEgP63hHZgTMwBO_FBFDvDxnJOVA:1vzmBt:bCToi4_SJDYmxGin6Ww2k_pznqohZu4XtVkP-6KAuQs",
+    "expire_date": "2026-03-24T01:47:21.559Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gtxoyxdntj8ms2ylq5ua3utp7ikc3vie",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKtBSX7j0DmWFmpGpoUtqV8e7apAvd_vfef6kE21rS1nhJE6mz8ur0uyHkB9cd0B3qbdZ5rusyod4VfdCmrzPx83K4fwcFWvnWFo1DcCgd9pYNE44Ys49OiDJSlEFsYNuNEgP63hHZgTMwBO_FBFDvDxnJOVA:1vzlpX:ftRyPH03RkJVaTtNUgPR-ObrjXwkiDL6OjePaQEyO0M",
+    "expire_date": "2026-03-24T01:24:15.299Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h3817e5w5hgougaooaa0sy4r2kow4oxf",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSE-C9gp0_sMiGUhOIlAMnYV5e6xJRdJN5r3Zt7Mh20tfutp8TOxK5Ps8tthiM9UD0CPUO-Nx1bXZUZ-KPyknU-N0ut2un8HJfSyrzMYRQYsaQ0yEOg8Oq3QapERMsSQHdiRwIKSds8CASQZ5xDlEMXAPl_J9DcS:1vzTvQ:b0tJBLsRTiGsNz5kHS-nxc0oGiK0Is6k49wo97LySiE",
+    "expire_date": "2026-03-23T06:17:08.531Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hgkr7nl44txqm3e7bi5qpwn8rzf5xd4e",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHQhUI9eu83kGVZpGpoUtqT8d9tkx70Npn3Zt4i4LaWsDVewpTEVfTi8ttFpCfXA6QH1vssaa7rMkV5KPKkTY5z4tftdP8OCrayr7OimDKQI4-sIJPLprcKsQMgcIOKeo_ReWb2A4MxBBkgd9pGi1aLzxcLlzhV:1w7NSz:MrSyRtNGp68IGzSAcdyBueQ1nFT4IyYhtLA8HgTqTM0",
+    "expire_date": "2026-04-14T01:00:25.410Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "idy2h3hs3izavffkwyw6z0xp4w5fg6yp",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKtBSX7j0DmWFmpGpoUtqV8e7apAvd_vfef6kE21rS1nhJE6mz8ur0uyHkB9cd0B3qbdZ5rusyod4VfdCmrzPx83K4fwcFWvnWFo1DcCgd9pYNE44Ys49OiDJSlEFsYNuNEgP63hHZgTMwBO_FBFDvDxnJOVA:1w08ds:cd4OCil99NS95lZulrtHLdufAkfHoxF5u7YNs-bsiso",
+    "expire_date": "2026-03-25T01:45:44.090Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "k0g1e0izwcj6qtz51rq4wca925y4ahzz",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHQhUI9eu83kGVZpGpoUtqT8d9tkx70Npn3Zt4i4LaWsDVewpTEVfTi8ttFpCfXA6QH1vssaa7rMkV5KPKkTY5z4tftdP8OCrayr7OimDKQI4-sIJPLprcKsQMgcIOKeo_ReWb2A4MxBBkgd9pGi1aLzxcLlzhV:1w4T8f:n9UKNva-rX3vswC5iJLunKixDHTS351R1-rV1fqYEhY",
+    "expire_date": "2026-04-06T00:27:25.587Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "l68yspaz6uhhps6vwwrbank19c9ftue9",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHQhUI9eu83kGVZpGpoUtqT8d9tkx70Npn3Zt4i4LaWsDVewpTEVfTi8ttFpCfXA6QH1vssaa7rMkV5KPKkTY5z4tftdP8OCrayr7OimDKQI4-sIJPLprcKsQMgcIOKeo_ReWb2A4MxBBkgd9pGi1aLzxcLlzhV:1w7OFx:4Cg5wPzWW7AAIXiQJt5rD6ab-CX30Ikj_klyX8scRVE",
+    "expire_date": "2026-04-14T01:51:01.930Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "q7wq099if8b5bhq27k8vbht6hfmrbj1v",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyELW5B69O43EGC3UjWQlPZk_Hdp0oNmbvPezFv4sK3Zb40XP5O4CCtOv10M6cllB_QI5V5lqmVd5ih3RR60yVslfl0P9-8gh5b7GhC5h1BpYssD0XhGayBRNMqMCC5qgEFZYw1GntAxJaNAKwfdnMTnC8qpNtg:1w7qY3:dI9HEgTqCFf_rspoaOExZ7WStVr7SlsOOcu3AOKSF3Y",
+    "expire_date": "2026-04-15T08:03:35.550Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qofnwa1d1vnhrk86e4zrvc4msiq6o3ov",
+  "fields": {
+    "session_data": ".eJxVjDEOwjAMRe-SGUVq4tgxIztnqNzEpQWUSE07Ie4OlTrA-t97_2V62dap35ou_ZzN2aA5_W6DpIeWHeS7lFu1qZZ1mQe7K_agzV5r1uflcP8OJmnTt2aFEYaOOIF6QmagHFGiU2B13lFkUh59UgghEjrEDFFiRyNqYDHvD8jdNwU:1wDYdR:Eb8I8FR_ahZIFWXeOY6Txh-JatfOMuHwnBNOlUK1az0",
+    "expire_date": "2026-05-01T02:08:45.069Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "urfgjvc43isc04csrbqzqxogv9c9x2rs",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKtBSX7j0DmWFmpGpoUtqV8e7apAvd_vfef6kE21rS1nhJE6mz8ur0uyHkB9cd0B3qbdZ5rusyod4VfdCmrzPx83K4fwcFWvnWFo1DcCgd9pYNE44Ys49OiDJSlEFsYNuNEgP63hHZgTMwBO_FBFDvDxnJOVA:1vzruq:05YcXmRq3Bk0uCDmjImUlXAb0E4MMukIUQsv12XeOmM",
+    "expire_date": "2026-03-24T07:54:08.096Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uyv1fnll3yv248min0qomih3ehtyj0eh",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKtBSX7j0DmWFmpGpoUtqV8e7apAvd_vfef6kE21rS1nhJE6mz8ur0uyHkB9cd0B3qbdZ5rusyod4VfdCmrzPx83K4fwcFWvnWFo1DcCgd9pYNE44Ys49OiDJSlEFsYNuNEgP63hHZgTMwBO_FBFDvDxnJOVA:1vzmpm:YHAiyiL8-I_YGZii6GWj04wRSuOPF93fpJDJ8dxypJk",
+    "expire_date": "2026-03-24T02:28:34.627Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vr92ua0ohbdk5ltbh66d16tyj1sfyf3e",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHQhUI9eu83kGVZpGpoUtqT8d9tkx70Npn3Zt4i4LaWsDVewpTEVfTi8ttFpCfXA6QH1vssaa7rMkV5KPKkTY5z4tftdP8OCrayr7OimDKQI4-sIJPLprcKsQMgcIOKeo_ReWb2A4MxBBkgd9pGi1aLzxcLlzhV:1w7SIU:qgkoutVhBYNAZrrklA4SORkMQTfIWyVLF6ItNYNi0G0",
+    "expire_date": "2026-04-14T06:09:54.232Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wno9izpxniqcu9ga4ouz76dijkclx2zq",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHQhUI9eu83kGVZpGpoUtqT8d9tkx70Npn3Zt4i4LaWsDVewpTEVfTi8ttFpCfXA6QH1vssaa7rMkV5KPKkTY5z4tftdP8OCrayr7OimDKQI4-sIJPLprcKsQMgcIOKeo_ReWb2A4MxBBkgd9pGi1aLzxcLlzhV:1w771Q:ZuTHwz_5JRFJMro2aB7P3BwviRWWc4xNWOjZeCqWEbA",
+    "expire_date": "2026-04-13T07:26:52.050Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ytddyi1mq1pzhpacsh2re7a7s5owodse",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyHQhUI9eu83kGVZpGpoUtqT8d9tkx70Npn3Zt4i4LaWsDVewpTEVfTi8ttFpCfXA6QH1vssaa7rMkV5KPKkTY5z4tftdP8OCrayr7OimDKQI4-sIJPLprcKsQMgcIOKeo_ReWb2A4MxBBkgd9pGi1aLzxcLlzhV:1w7SJz:e0OJI5dsvE4nDa0fVXs814sarjVIeDD3Ia7uJNYaqNo",
+    "expire_date": "2026-04-14T06:11:27.962Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zjgeyoapukdbxx8t9ashb7piigawesnd",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKtBSX7j0DmWFmpGpoUtqV8e7apAvd_vfef6kE21rS1nhJE6mz8ur0uyHkB9cd0B3qbdZ5rusyod4VfdCmrzPx83K4fwcFWvnWFo1DcCgd9pYNE44Ys49OiDJSlEFsYNuNEgP63hHZgTMwBO_FBFDvDxnJOVA:1vzmiy:ME3xrF8zj9OhXgExmi_aNCzWWnNxwqbdoDHY7nsT0vw",
+    "expire_date": "2026-03-24T02:21:32.363Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zn3635o258rm393x8x6ebi8ts61g2nsk",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAKtBSX7j0DmWFmpGpoUtqV8e7apAvd_vfef6kE21rS1nhJE6mz8ur0uyHkB9cd0B3qbdZ5rusyod4VfdCmrzPx83K4fwcFWvnWFo1DcCgd9pYNE44Ys49OiDJSlEFsYNuNEgP63hHZgTMwBO_FBFDvDxnJOVA:1vzmKk:XF4fMO-GwmYkP2hqCVCYuGURLB5nI9JHuso3KeAtjkM",
+    "expire_date": "2026-03-24T01:56:30.163Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 31,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 60,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 1200,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-03-17",
+    "created_at": "2026-03-17T08:20:18.016Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 33,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 40,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 800,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-03-18",
+    "created_at": "2026-03-18T06:24:01Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 41,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "Premium",
+    "tank1_cm": 55,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1100,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-03-18",
+    "created_at": "2026-03-18T08:02:06Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 42,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 70,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 1700,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-03-18",
+    "created_at": "2026-03-18T08:03:32.289Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 43,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "Diesel",
+    "tank1_cm": 0,
+    "tank2_cm": 65,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 900,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-03-18",
+    "created_at": "2026-03-18T08:04:33Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 44,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 90,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 1800,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-03-19",
+    "created_at": "2026-03-19T00:58:24Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 45,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "ULG",
+    "tank1_cm": 45,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 900,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-03-19",
+    "created_at": "2026-03-19T01:56:46.892Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 46,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "Diesel",
+    "tank1_cm": 80,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1600,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 1.0,
+    "is_read": true,
+    "date": "2026-03-21",
+    "created_at": "2026-03-21T00:42:12Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 47,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "Premium",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-03-21",
+    "created_at": "2026-03-21T01:02:12.358Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 48,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "ULG",
+    "tank1_cm": 130,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 2300,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 2.0,
+    "is_read": false,
+    "date": "2026-03-21",
+    "created_at": "2026-03-21T01:55:40.053Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 49,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "Premium",
+    "tank1_cm": 100,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 2000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 3.0,
+    "is_read": true,
+    "date": "2026-03-24",
+    "created_at": "2026-03-24T01:31:38.107Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 50,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "Premium",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 2.0,
+    "is_read": false,
+    "date": "2026-03-30",
+    "created_at": "2026-03-30T07:22:05.167Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 51,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "Diesel",
+    "tank1_cm": 250,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 3500,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 4.0,
+    "is_read": false,
+    "date": "2026-03-30",
+    "created_at": "2026-03-30T07:22:52.680Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 52,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "ULG",
+    "tank1_cm": 200,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 3000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 4.0,
+    "is_read": false,
+    "date": "2026-03-30",
+    "created_at": "2026-03-30T07:22:52.697Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 53,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "Diesel",
+    "tank1_cm": 400,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 8000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-03-30",
+    "created_at": "2026-03-30T07:26:11.619Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 54,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "ULG",
+    "tank1_cm": 450,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 9000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-03-30",
+    "created_at": "2026-03-30T07:26:11.640Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 55,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Premium",
+    "tank1_cm": 600,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 11000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 2.0,
+    "is_read": false,
+    "date": "2026-03-31",
+    "created_at": "2026-03-31T00:59:57.491Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 56,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Diesel",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 50,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 1000,
+    "dispatch_liters": 2.0,
+    "is_read": false,
+    "date": "2026-03-31",
+    "created_at": "2026-03-31T00:59:57.512Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 57,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 400,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 5500,
+    "tank3_liters": 0,
+    "dispatch_liters": 2.0,
+    "is_read": false,
+    "date": "2026-03-31",
+    "created_at": "2026-03-31T00:59:57.547Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 58,
+  "fields": {
+    "user": 8,
+    "station": 1,
+    "fuel_type": "Premium",
+    "tank1_cm": 500,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 5000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T16:06:29.663Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 59,
+  "fields": {
+    "user": 8,
+    "station": 1,
+    "fuel_type": "Diesel",
+    "tank1_cm": 850,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 11000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T16:33:30.008Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 60,
+  "fields": {
+    "user": 8,
+    "station": 1,
+    "fuel_type": "ULG",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 4700,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T16:33:30.023Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 61,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "Premium",
+    "tank1_cm": 500,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 10000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 3.0,
+    "is_read": false,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T17:38:20.922Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 62,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "Diesel",
+    "tank1_cm": 100,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 3000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 1.0,
+    "is_read": false,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T17:38:20.984Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 63,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "ULG",
+    "tank1_cm": 75,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 2500,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 1.0,
+    "is_read": false,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T17:38:20.991Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 64,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "Premium",
+    "tank1_cm": 100,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 200,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T17:42:19.986Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 65,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "Diesel",
+    "tank1_cm": 400,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 8000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T17:42:20.008Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 66,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "ULG",
+    "tank1_cm": 400,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 8000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T17:42:20.031Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 67,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Premium",
+    "tank1_cm": 150,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 3000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 2.0,
+    "is_read": false,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T17:45:16.730Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 68,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Diesel",
+    "tank1_cm": 200,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 4000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 1.0,
+    "is_read": false,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T17:45:16.758Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 69,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "ULG",
+    "tank1_cm": 55,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 5500,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 3.0,
+    "is_read": false,
+    "date": "2026-04-03",
+    "created_at": "2026-04-02T17:45:16.774Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 70,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "Premium",
+    "tank1_cm": 100,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 2000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T16:17:14.262Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 71,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "Diesel",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 350,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 7000,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T16:17:14.297Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 72,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 450,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 9000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T16:17:14.313Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 73,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Premium",
+    "tank1_cm": 200,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 4000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T16:20:45.386Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 74,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Diesel",
+    "tank1_cm": 0,
+    "tank2_cm": 150,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T16:20:45.398Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 75,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 200,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T16:20:45.417Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 76,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Premium",
+    "tank1_cm": 225,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 4500,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T16:22:59.011Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 77,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Diesel",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 175,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 3500,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T16:22:59.251Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 78,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "ULG",
+    "tank1_cm": 200,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 4000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T16:22:59.723Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 79,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Premium",
+    "tank1_cm": 200,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 4700,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T17:34:48.012Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 80,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Diesel",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 200,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 4000,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T17:34:48.039Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 81,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 300,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 5500,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-05",
+    "created_at": "2026-04-04T17:34:48.051Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 82,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "Premium",
+    "tank1_cm": 150,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 3000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-05",
+    "created_at": "2026-04-05T08:13:04.803Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 83,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "Diesel",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 400,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 8000,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-05",
+    "created_at": "2026-04-05T08:13:05.378Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 84,
+  "fields": {
+    "user": 5,
+    "station": 3,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 350,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 7000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-05",
+    "created_at": "2026-04-05T08:13:05.778Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 85,
+  "fields": {
+    "user": 4,
+    "station": 2,
+    "fuel_type": "Premium",
+    "tank1_cm": 100,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 4000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-06",
+    "created_at": "2026-04-05T23:54:15.639Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 86,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Premium",
+    "tank1_cm": 200,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 4000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-07",
+    "created_at": "2026-04-07T00:34:52.745Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 87,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Premium",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-08",
+    "created_at": "2026-04-08T07:01:47.877Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 88,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Diesel",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 250,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 5000,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-08",
+    "created_at": "2026-04-08T07:01:47.901Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 89,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 300,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 6600,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-08",
+    "created_at": "2026-04-08T07:01:47.918Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 90,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Premium",
+    "tank1_cm": 350,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 7000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-08",
+    "created_at": "2026-04-08T07:05:11.307Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 91,
+  "fields": {
+    "user": 7,
+    "station": 9,
+    "fuel_type": "Premium",
+    "tank1_cm": 300,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 6300,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-08",
+    "created_at": "2026-04-08T07:10:03.822Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 92,
+  "fields": {
+    "user": 4,
+    "station": 3,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T01:36:08.499Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 93,
+  "fields": {
+    "user": 4,
+    "station": 3,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 5000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T01:36:27.695Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 94,
+  "fields": {
+    "user": 4,
+    "station": 3,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 1000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T01:38:00.846Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 95,
+  "fields": {
+    "user": 4,
+    "station": 3,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 3000,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T01:38:00.872Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 97,
+  "fields": {
+    "user": 7,
+    "station": 58,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 250,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 5000,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T06:32:52.187Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 98,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 5000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T07:30:19.494Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 99,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Diesel",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 6000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T07:30:19.509Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 100,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 5900,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T07:30:19.526Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 101,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 4000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T07:33:43.978Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 102,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Diesel",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 50,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 5000,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T07:33:43.990Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 103,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 50,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 5000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T07:33:44.006Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 104,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 50,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T07:40:09.792Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 105,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 150,
+    "tank2_cm": 250,
+    "tank3_cm": 0,
+    "tank1_liters": 3000,
+    "tank2_liters": 5000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T07:50:05.031Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 106,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 150,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T07:50:05.045Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 107,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 50,
+    "tank2_cm": 50,
+    "tank3_cm": 0,
+    "tank1_liters": 3000,
+    "tank2_liters": 3000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T07:51:19.295Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 108,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 50,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": true,
+    "date": "2026-04-10",
+    "created_at": "2026-04-10T07:51:19.304Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 109,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 200,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T00:56:02.973Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 110,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 50,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T00:56:03.022Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 111,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 300,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T01:08:00.843Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 112,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 150,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T01:08:00.868Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 113,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 200,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T01:12:03.405Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 114,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 400,
+    "tank2_cm": 150,
+    "tank3_cm": 0,
+    "tank1_liters": 7500,
+    "tank2_liters": 3000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T01:12:03.429Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 115,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Diesel",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T01:13:54.056Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 116,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 350,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 7000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T01:13:54.070Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 117,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T01:16:16.699Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 118,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Diesel",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T01:16:16.743Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 119,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 50,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T01:16:16.763Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 120,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 100,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 2000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T01:39:17.997Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 121,
+  "fields": {
+    "user": 7,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 50,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 1000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-11",
+    "created_at": "2026-04-11T01:39:18.032Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 122,
+  "fields": {
+    "user": 8,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 2000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-12",
+    "created_at": "2026-04-12T09:24:18.777Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 123,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-12",
+    "created_at": "2026-04-12T09:24:18.825Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 124,
+  "fields": {
+    "user": 8,
+    "station": 53,
+    "fuel_type": "Diesel",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-12",
+    "created_at": "2026-04-12T09:24:18.839Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 125,
+  "fields": {
+    "user": 8,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 7000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-12",
+    "created_at": "2026-04-12T09:24:18.843Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 126,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-12",
+    "created_at": "2026-04-12T09:24:18.857Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 127,
+  "fields": {
+    "user": 8,
+    "station": 58,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 9000,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-12",
+    "created_at": "2026-04-12T09:24:18.867Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 128,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T00:43:02.508Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 129,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3500,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T00:43:02.539Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 130,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4100,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T00:50:44.080Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 131,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3600,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T00:50:44.170Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 132,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 200,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T01:00:26.143Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 133,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 175,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3500,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T01:00:26.203Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 134,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 205,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4100,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T01:04:29.323Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 135,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 180,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3600,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T01:04:29.413Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 136,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 200,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T01:09:09.909Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 137,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 175,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3500,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T01:09:09.934Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 138,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 205,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4100,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T01:17:27.723Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 139,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 180,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 3600,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T01:17:27.742Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 140,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T01:17:54.525Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 141,
+  "fields": {
+    "user": 4,
+    "station": 9,
+    "fuel_type": "Premium",
+    "tank1_cm": 310,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 6200,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:13:44.732Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 142,
+  "fields": {
+    "user": 4,
+    "station": 9,
+    "fuel_type": "Diesel",
+    "tank1_cm": 255,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 5100,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:13:44.759Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 143,
+  "fields": {
+    "user": 4,
+    "station": 9,
+    "fuel_type": "ULG",
+    "tank1_cm": 350,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 6600,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:13:44.777Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 144,
+  "fields": {
+    "user": 9,
+    "station": 22,
+    "fuel_type": "Premium",
+    "tank1_cm": 700,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1400,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:19:58.790Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 145,
+  "fields": {
+    "user": 9,
+    "station": 23,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 50,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 1000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:19:58.825Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 146,
+  "fields": {
+    "user": 9,
+    "station": 22,
+    "fuel_type": "Diesel",
+    "tank1_cm": 200,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 4000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:19:58.834Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 147,
+  "fields": {
+    "user": 9,
+    "station": 22,
+    "fuel_type": "Premium",
+    "tank1_cm": 7000,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 14000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:20:51.875Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 148,
+  "fields": {
+    "user": 8,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 205,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 2100,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:24:17.280Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 149,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 225,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4500,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:24:17.307Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 150,
+  "fields": {
+    "user": 8,
+    "station": 53,
+    "fuel_type": "Diesel",
+    "tank1_cm": 75,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1500,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:24:17.326Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 151,
+  "fields": {
+    "user": 8,
+    "station": 58,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 450,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 9000,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:24:17.338Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 152,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 50,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 1000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-13",
+    "created_at": "2026-04-13T02:25:49.369Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 153,
+  "fields": {
+    "user": 9,
+    "station": 22,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 14010,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-14",
+    "created_at": "2026-04-14T01:59:54.179Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 154,
+  "fields": {
+    "user": 4,
+    "station": 9,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 4500,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-14",
+    "created_at": "2026-04-14T02:11:53.767Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 155,
+  "fields": {
+    "user": 9,
+    "station": 60,
+    "fuel_type": "Premium",
+    "tank1_cm": 100,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 2000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-14",
+    "created_at": "2026-04-14T07:16:41.744Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 156,
+  "fields": {
+    "user": 9,
+    "station": 61,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 250,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 6000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-14",
+    "created_at": "2026-04-14T07:16:41.758Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 157,
+  "fields": {
+    "user": 9,
+    "station": 60,
+    "fuel_type": "Diesel",
+    "tank1_cm": 160,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 3700,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-14",
+    "created_at": "2026-04-14T07:16:41.765Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 158,
+  "fields": {
+    "user": 8,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 100,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 2000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-14",
+    "created_at": "2026-04-14T07:23:26.460Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 159,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 225,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 4550,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-14",
+    "created_at": "2026-04-14T07:23:26.476Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 160,
+  "fields": {
+    "user": 8,
+    "station": 53,
+    "fuel_type": "Diesel",
+    "tank1_cm": 163,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1300,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-14",
+    "created_at": "2026-04-14T07:23:26.490Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 161,
+  "fields": {
+    "user": 8,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 325,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 7500,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-14",
+    "created_at": "2026-04-14T07:23:26.499Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 162,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 75,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 1500,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-14",
+    "created_at": "2026-04-14T07:23:26.499Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 163,
+  "fields": {
+    "user": 8,
+    "station": 58,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 350,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 9000,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-14",
+    "created_at": "2026-04-14T07:23:26.513Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 164,
+  "fields": {
+    "user": 8,
+    "station": 53,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-15",
+    "created_at": "2026-04-15T01:26:38.144Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 165,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "Premium",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 1000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-15",
+    "created_at": "2026-04-15T01:26:38.161Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 166,
+  "fields": {
+    "user": 8,
+    "station": 53,
+    "fuel_type": "Diesel",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-15",
+    "created_at": "2026-04-15T01:26:38.174Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 167,
+  "fields": {
+    "user": 8,
+    "station": 53,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 1000,
+    "tank2_liters": 0,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-15",
+    "created_at": "2026-04-15T01:26:38.187Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 168,
+  "fields": {
+    "user": 8,
+    "station": 57,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 1000,
+    "tank3_liters": 0,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-15",
+    "created_at": "2026-04-15T01:26:38.198Z"
+  }
+},
+{
+  "model": "staff.fuelinventory",
+  "pk": 169,
+  "fields": {
+    "user": 8,
+    "station": 58,
+    "fuel_type": "ULG",
+    "tank1_cm": 0,
+    "tank2_cm": 0,
+    "tank3_cm": 0,
+    "tank1_liters": 0,
+    "tank2_liters": 0,
+    "tank3_liters": 1000,
+    "dispatch_liters": 0.0,
+    "is_read": false,
+    "date": "2026-04-15",
+    "created_at": "2026-04-15T01:26:38.203Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 1,
+  "fields": {
+    "station": 2,
+    "fuel_type": "Diesel",
+    "dispatch_liters": 3.0,
+    "dispatch_liters2": 5.0,
+    "updated_at": "2026-04-16T02:08:05.631Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 2,
+  "fields": {
+    "station": 2,
+    "fuel_type": "ULG",
+    "dispatch_liters": 3.0,
+    "dispatch_liters2": 3.0,
+    "updated_at": "2026-04-14T07:32:00.973Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 3,
+  "fields": {
+    "station": 1,
+    "fuel_type": "Premium",
+    "dispatch_liters": 5.0,
+    "dispatch_liters2": 6.0,
+    "updated_at": "2026-04-14T07:34:12.732Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 4,
+  "fields": {
+    "station": 2,
+    "fuel_type": "Premium",
+    "dispatch_liters": 3.0,
+    "dispatch_liters2": 3.0,
+    "updated_at": "2026-04-15T00:47:29.312Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 5,
+  "fields": {
+    "station": 9,
+    "fuel_type": "Premium",
+    "dispatch_liters": 2.0,
+    "dispatch_liters2": 3.0,
+    "updated_at": "2026-04-14T05:37:57.167Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 6,
+  "fields": {
+    "station": 9,
+    "fuel_type": "ULG",
+    "dispatch_liters": 1.0,
+    "dispatch_liters2": 5.0,
+    "updated_at": "2026-04-16T02:07:42.692Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 7,
+  "fields": {
+    "station": 9,
+    "fuel_type": "Diesel",
+    "dispatch_liters": 3.0,
+    "dispatch_liters2": 2.0,
+    "updated_at": "2026-04-16T02:07:56.871Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 8,
+  "fields": {
+    "station": 3,
+    "fuel_type": "Premium",
+    "dispatch_liters": 3.0,
+    "dispatch_liters2": 4.0,
+    "updated_at": "2026-04-14T07:32:45.149Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 9,
+  "fields": {
+    "station": 3,
+    "fuel_type": "ULG",
+    "dispatch_liters": 3.0,
+    "dispatch_liters2": 4.0,
+    "updated_at": "2026-04-15T00:47:14.409Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 10,
+  "fields": {
+    "station": 3,
+    "fuel_type": "Diesel",
+    "dispatch_liters": 3.0,
+    "dispatch_liters2": 4.0,
+    "updated_at": "2026-04-14T07:33:00.895Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 11,
+  "fields": {
+    "station": 1,
+    "fuel_type": "ULG",
+    "dispatch_liters": 3.0,
+    "dispatch_liters2": 0.0,
+    "updated_at": "2026-04-04T17:26:32.712Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 12,
+  "fields": {
+    "station": 1,
+    "fuel_type": "Diesel",
+    "dispatch_liters": 3.0,
+    "dispatch_liters2": 4.0,
+    "updated_at": "2026-04-14T07:33:42.377Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 13,
+  "fields": {
+    "station": 2,
+    "fuel_type": "Regular",
+    "dispatch_liters": 0.0,
+    "dispatch_liters2": 0.0,
+    "updated_at": "2026-04-06T08:03:56.235Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 14,
+  "fields": {
+    "station": 9,
+    "fuel_type": "Regular",
+    "dispatch_liters": 0.0,
+    "dispatch_liters2": 3.0,
+    "updated_at": "2026-04-06T08:01:03.536Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 15,
+  "fields": {
+    "station": 10,
+    "fuel_type": "Premium",
+    "dispatch_liters": 2.0,
+    "dispatch_liters2": 2.0,
+    "updated_at": "2026-04-16T02:07:25.399Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 16,
+  "fields": {
+    "station": 31,
+    "fuel_type": "Premium",
+    "dispatch_liters": 3.0,
+    "dispatch_liters2": 0.0,
+    "updated_at": "2026-04-07T07:05:30.469Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 17,
+  "fields": {
+    "station": 20,
+    "fuel_type": "Premium",
+    "dispatch_liters": 2.0,
+    "dispatch_liters2": 0.0,
+    "updated_at": "2026-04-09T06:38:20.013Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 18,
+  "fields": {
+    "station": 58,
+    "fuel_type": "ULG",
+    "dispatch_liters": 2.0,
+    "dispatch_liters2": 0.0,
+    "updated_at": "2026-04-10T07:36:36.437Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 19,
+  "fields": {
+    "station": 53,
+    "fuel_type": "Premium",
+    "dispatch_liters": 3.0,
+    "dispatch_liters2": 7.0,
+    "updated_at": "2026-04-11T05:55:11.096Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 20,
+  "fields": {
+    "station": 60,
+    "fuel_type": "Premium",
+    "dispatch_liters": 2.0,
+    "dispatch_liters2": 3.0,
+    "updated_at": "2026-04-14T07:24:12.902Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 21,
+  "fields": {
+    "station": 61,
+    "fuel_type": "Premium",
+    "dispatch_liters": 1.0,
+    "dispatch_liters2": 2.0,
+    "updated_at": "2026-04-14T07:24:29.084Z"
+  }
+},
+{
+  "model": "staff.stationdispatch",
+  "pk": 22,
+  "fields": {
+    "station": 60,
+    "fuel_type": "Diesel",
+    "dispatch_liters": 2.0,
+    "dispatch_liters2": 3.0,
+    "updated_at": "2026-04-14T07:24:36.097Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 1,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for Valladolid Crossing.",
+    "is_read": true,
+    "created_at": "2026-04-02T16:06:29.680Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 2,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for Valladolid Crossing.",
+    "is_read": true,
+    "created_at": "2026-04-02T16:33:30.035Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 3,
+  "fields": {
+    "recipient": 8,
+    "notif_type": "report_read",
+    "message": "✅ Admin has read your ULG inventory report for Valladolid Crossing.",
+    "is_read": false,
+    "created_at": "2026-04-02T17:16:13.151Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 4,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Juan submitted a new fuel inventory report for City Gas 77 Cadiz.",
+    "is_read": true,
+    "created_at": "2026-04-02T17:38:21.003Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 5,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Noypi submitted a new fuel inventory report for P77 Alijis.",
+    "is_read": true,
+    "created_at": "2026-04-02T17:42:20.047Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 6,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for 77 Sagay.",
+    "is_read": true,
+    "created_at": "2026-04-02T17:45:16.800Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 7,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Noypi submitted a new fuel inventory report for P77 Alijis.",
+    "is_read": true,
+    "created_at": "2026-04-04T16:17:14.315Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 8,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for 77 Sagay.",
+    "is_read": true,
+    "created_at": "2026-04-04T16:20:45.432Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 9,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for 77 Sagay.",
+    "is_read": true,
+    "created_at": "2026-04-04T16:23:00.002Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 10,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for 77 Sagay.",
+    "is_read": true,
+    "created_at": "2026-04-04T17:34:48.058Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 11,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Noypi submitted a new fuel inventory report for P77 Alijis.",
+    "is_read": true,
+    "created_at": "2026-04-05T08:13:05.861Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 12,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Juan submitted a new fuel inventory report for City Gas 77 Cadiz.",
+    "is_read": true,
+    "created_at": "2026-04-05T23:54:15.652Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 13,
+  "fields": {
+    "recipient": 7,
+    "notif_type": "report_read",
+    "message": "✅ Admin has read your ULG inventory report for 77 Sagay.",
+    "is_read": false,
+    "created_at": "2026-04-06T00:10:53.677Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 14,
+  "fields": {
+    "recipient": 7,
+    "notif_type": "report_read",
+    "message": "✅ Admin has read your Diesel inventory report for 77 Sagay.",
+    "is_read": false,
+    "created_at": "2026-04-07T00:27:41.356Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 15,
+  "fields": {
+    "recipient": 7,
+    "notif_type": "report_read",
+    "message": "✅ Admin has read your ULG inventory report for 77 Sagay.",
+    "is_read": false,
+    "created_at": "2026-04-07T00:27:45.135Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 16,
+  "fields": {
+    "recipient": 7,
+    "notif_type": "report_read",
+    "message": "✅ Admin has read your Premium inventory report for 77 Sagay.",
+    "is_read": false,
+    "created_at": "2026-04-07T00:32:02.459Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 17,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for 77 Sagay.",
+    "is_read": true,
+    "created_at": "2026-04-07T00:34:52.759Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 18,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for 77 Sagay.",
+    "is_read": true,
+    "created_at": "2026-04-08T07:01:47.936Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 19,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for 77 Sagay.",
+    "is_read": true,
+    "created_at": "2026-04-08T07:05:11.326Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 20,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for 77 Sagay.",
+    "is_read": true,
+    "created_at": "2026-04-08T07:10:03.836Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 21,
+  "fields": {
+    "recipient": 7,
+    "notif_type": "report_read",
+    "message": "✅ Admin has read your Premium inventory report for 77 Sagay.",
+    "is_read": false,
+    "created_at": "2026-04-09T06:19:05.741Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 22,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Juan submitted a new fuel inventory report for P77 Alijis.",
+    "is_read": true,
+    "created_at": "2026-04-10T01:36:08.523Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 23,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Juan submitted a new fuel inventory report for P77 Alijis.",
+    "is_read": true,
+    "created_at": "2026-04-10T01:36:27.714Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 24,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Juan submitted a new fuel inventory report for P77 Alijis.",
+    "is_read": true,
+    "created_at": "2026-04-10T01:38:00.889Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 25,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-10T06:30:05.614Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 26,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-10T06:32:52.209Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 27,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T1.",
+    "is_read": true,
+    "created_at": "2026-04-10T07:30:19.534Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 28,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T1.",
+    "is_read": true,
+    "created_at": "2026-04-10T07:33:44.013Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 29,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T1.",
+    "is_read": true,
+    "created_at": "2026-04-10T07:40:09.800Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 30,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T1.",
+    "is_read": true,
+    "created_at": "2026-04-10T07:50:05.063Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 31,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T1.",
+    "is_read": true,
+    "created_at": "2026-04-10T07:51:19.315Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 32,
+  "fields": {
+    "recipient": 7,
+    "notif_type": "report_read",
+    "message": "✅ Admin has read your ULG inventory report for MJM Tayasan T1.",
+    "is_read": false,
+    "created_at": "2026-04-11T00:53:26.370Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 33,
+  "fields": {
+    "recipient": 7,
+    "notif_type": "report_read",
+    "message": "✅ Admin has read your Premium inventory report for MJM Tayasan T1.",
+    "is_read": false,
+    "created_at": "2026-04-11T00:53:29.470Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 34,
+  "fields": {
+    "recipient": 7,
+    "notif_type": "report_read",
+    "message": "✅ Admin has read your ULG inventory report for MJM Tayasan T1.",
+    "is_read": false,
+    "created_at": "2026-04-11T00:53:35.326Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 35,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T1.",
+    "is_read": true,
+    "created_at": "2026-04-11T00:56:03.056Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 36,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T1.",
+    "is_read": true,
+    "created_at": "2026-04-11T01:08:00.890Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 37,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T1.",
+    "is_read": true,
+    "created_at": "2026-04-11T01:12:03.450Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 38,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T1.",
+    "is_read": true,
+    "created_at": "2026-04-11T01:13:54.093Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 39,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T1.",
+    "is_read": true,
+    "created_at": "2026-04-11T01:16:16.780Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 40,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Jerome submitted a new fuel inventory report for MJM Tayasan T1.",
+    "is_read": true,
+    "created_at": "2026-04-11T01:39:18.051Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 41,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-12T09:24:18.882Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 42,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-13T00:43:02.556Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 43,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-13T00:50:44.184Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 44,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-13T01:00:26.222Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 45,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-13T01:04:29.449Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 46,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-13T01:09:09.948Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 47,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-13T01:17:27.762Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 48,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-13T01:17:54.552Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 49,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Juan submitted a new fuel inventory report for 77 Sagay.",
+    "is_read": true,
+    "created_at": "2026-04-13T02:13:44.796Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 50,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Pinoy submitted a new fuel inventory report for PG Hinigaran T1, PG Hinigaran T2.",
+    "is_read": true,
+    "created_at": "2026-04-13T02:19:58.846Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 51,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Pinoy submitted a new fuel inventory report for PG Hinigaran T1, PG Hinigaran T2.",
+    "is_read": true,
+    "created_at": "2026-04-13T02:20:51.902Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 52,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-13T02:24:17.350Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 53,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-13T02:25:49.393Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 54,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Pinoy submitted a new fuel inventory report for PG Hinigaran T1, PG Hinigaran T2.",
+    "is_read": true,
+    "created_at": "2026-04-14T01:59:54.211Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 55,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Juan submitted a new fuel inventory report for 77 Sagay.",
+    "is_read": true,
+    "created_at": "2026-04-14T02:11:53.790Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 56,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Pinoy submitted a new fuel inventory report for P77 Tabu T1, P77 Tabu T2.",
+    "is_read": true,
+    "created_at": "2026-04-14T07:16:41.779Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 57,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-14T07:23:26.520Z"
+  }
+},
+{
+  "model": "staff.notification",
+  "pk": 58,
+  "fields": {
+    "recipient": 6,
+    "notif_type": "new_report",
+    "message": "📋 Nonoy submitted a new fuel inventory report for MJM Tayasan T1, MJM Tayasan T2, MJM Tayasan T3.",
+    "is_read": true,
+    "created_at": "2026-04-15T01:26:38.216Z"
+  }
+},
+{
+  "model": "staff.profile",
+  "pk": 1,
+  "fields": {
+    "user": 4,
+    "profile_pic": "profile_pics/nonoy.jpg",
+    "phone_number": "09773653462",
+    "position": "Manager",
+    "employee_id": ""
+  }
+},
+{
+  "model": "staff.profile",
+  "pk": 2,
+  "fields": {
+    "user": 5,
+    "profile_pic": "default.jpg",
+    "phone_number": "",
+    "position": "",
+    "employee_id": ""
+  }
+},
+{
+  "model": "account.cluster",
+  "pk": 1,
+  "fields": {
+    "name": "North Negros Area",
+    "code": "A"
+  }
+},
+{
+  "model": "account.cluster",
+  "pk": 2,
+  "fields": {
+    "name": "Bacolod Area",
+    "code": "B"
+  }
+},
+{
+  "model": "account.cluster",
+  "pk": 3,
+  "fields": {
+    "name": "South Negros Area",
+    "code": "C"
+  }
+},
+{
+  "model": "account.cluster",
+  "pk": 7,
+  "fields": {
+    "name": "LC Canlaon Area",
+    "code": "D"
+  }
+},
+{
+  "model": "account.cluster",
+  "pk": 8,
+  "fields": {
+    "name": "South Negros Area",
+    "code": "E"
+  }
+},
+{
+  "model": "account.cluster",
+  "pk": 9,
+  "fields": {
+    "name": "Upper Kabankalan Area",
+    "code": "F"
+  }
+},
+{
+  "model": "account.cluster",
+  "pk": 12,
+  "fields": {
+    "name": "Tabu Area",
+    "code": "G"
+  }
+},
+{
+  "model": "account.cluster",
+  "pk": 13,
+  "fields": {
+    "name": "Lower South Negros Area",
+    "code": "H"
+  }
+},
+{
+  "model": "account.cluster",
+  "pk": 14,
+  "fields": {
+    "name": "South Oriental Area",
+    "code": "I"
+  }
+},
+{
+  "model": "account.cluster",
+  "pk": 15,
+  "fields": {
+    "name": "North Oriental Area",
+    "code": "J"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 1,
+  "fields": {
+    "cluster": 3,
+    "name": "Valladolid Crossing",
+    "tank_capacity": 16000,
+    "address": "",
+    "premium_capacity": 16000,
+    "regular_capacity": 16000,
+    "diesel_capacity": 16000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 2,
+  "fields": {
+    "cluster": 1,
+    "name": "City Gas 77 Cadiz",
+    "tank_capacity": 16000,
+    "address": "",
+    "premium_capacity": 16000,
+    "regular_capacity": 5000,
+    "diesel_capacity": 11000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 3,
+  "fields": {
+    "cluster": 2,
+    "name": "P77 Alijis",
+    "tank_capacity": 10000,
+    "address": "",
+    "premium_capacity": 10000,
+    "regular_capacity": 10000,
+    "diesel_capacity": 16000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 8,
+  "fields": {
+    "cluster": null,
+    "name": "Station Juven",
+    "tank_capacity": 16000,
+    "address": null,
+    "premium_capacity": 16000,
+    "regular_capacity": 16000,
+    "diesel_capacity": 16000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 9,
+  "fields": {
+    "cluster": 1,
+    "name": "77 Sagay",
+    "tank_capacity": 9000,
+    "address": "",
+    "premium_capacity": 16000,
+    "regular_capacity": 11000,
+    "diesel_capacity": 5400,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 10,
+  "fields": {
+    "cluster": 1,
+    "name": "Magic Gas Station San Carlos",
+    "tank_capacity": 16000,
+    "address": "",
+    "premium_capacity": 16000,
+    "regular_capacity": 11000,
+    "diesel_capacity": 8000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 12,
+  "fields": {
+    "cluster": 2,
+    "name": "P77 La Salle",
+    "tank_capacity": 23000,
+    "address": "",
+    "premium_capacity": 23000,
+    "regular_capacity": 23000,
+    "diesel_capacity": 23000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 13,
+  "fields": {
+    "cluster": 2,
+    "name": "PG Granada",
+    "tank_capacity": 16000,
+    "address": "",
+    "premium_capacity": 16000,
+    "regular_capacity": 16000,
+    "diesel_capacity": 16000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 14,
+  "fields": {
+    "cluster": 2,
+    "name": "City Gas 77 Greensville",
+    "tank_capacity": 11000,
+    "address": "",
+    "premium_capacity": 11000,
+    "regular_capacity": 5400,
+    "diesel_capacity": 5400,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 15,
+  "fields": {
+    "cluster": 2,
+    "name": "City Gas 77 Murcia",
+    "tank_capacity": 11000,
+    "address": "",
+    "premium_capacity": 11000,
+    "regular_capacity": 5000,
+    "diesel_capacity": 8000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 16,
+  "fields": {
+    "cluster": 2,
+    "name": "PG Talisay",
+    "tank_capacity": 5000,
+    "address": "",
+    "premium_capacity": 5000,
+    "regular_capacity": 5000,
+    "diesel_capacity": 10000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 17,
+  "fields": {
+    "cluster": 3,
+    "name": "P77 Valladolid (small)",
+    "tank_capacity": 0,
+    "address": "",
+    "premium_capacity": 10000,
+    "regular_capacity": null,
+    "diesel_capacity": 5000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 18,
+  "fields": {
+    "cluster": 3,
+    "name": "PG Bago",
+    "tank_capacity": 0,
+    "address": "",
+    "premium_capacity": 7300,
+    "regular_capacity": 4700,
+    "diesel_capacity": 4800,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 19,
+  "fields": {
+    "cluster": 3,
+    "name": "PG Marayo",
+    "tank_capacity": 0,
+    "address": "",
+    "premium_capacity": 16000,
+    "regular_capacity": 5000,
+    "diesel_capacity": 10000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 20,
+  "fields": {
+    "cluster": 3,
+    "name": "GTN Bocar Hinigaran T1",
+    "tank_capacity": 0,
+    "address": "",
+    "premium_capacity": 5000,
+    "regular_capacity": 0,
+    "diesel_capacity": 5000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 21,
+  "fields": {
+    "cluster": 3,
+    "name": "GTN Bocar Hinigaran T2",
+    "tank_capacity": 0,
+    "address": "",
+    "premium_capacity": 5000,
+    "regular_capacity": 0,
+    "diesel_capacity": 0,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 22,
+  "fields": {
+    "cluster": 3,
+    "name": "PG Hinigaran T1",
+    "tank_capacity": 0,
+    "address": "",
+    "premium_capacity": 15000,
+    "regular_capacity": 0,
+    "diesel_capacity": 8000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 23,
+  "fields": {
+    "cluster": 3,
+    "name": "PG Hinigaran T2",
+    "tank_capacity": 0,
+    "address": "",
+    "premium_capacity": 8000,
+    "regular_capacity": 0,
+    "diesel_capacity": 0,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 24,
+  "fields": {
+    "cluster": 7,
+    "name": "Isabela (Max fuel)",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 10000,
+    "regular_capacity": 5000,
+    "diesel_capacity": 10000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 28,
+  "fields": {
+    "cluster": 1,
+    "name": "MG Prime San Carlos",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 6000,
+    "regular_capacity": 6000,
+    "diesel_capacity": 6000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 29,
+  "fields": {
+    "cluster": 7,
+    "name": "PG La Castellana",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 9000,
+    "regular_capacity": 0,
+    "diesel_capacity": 5000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 30,
+  "fields": {
+    "cluster": 7,
+    "name": "MIL Canlaon/JDS",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 10000,
+    "regular_capacity": 0,
+    "diesel_capacity": 5000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 31,
+  "fields": {
+    "cluster": 8,
+    "name": "PG Himamaylan",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 10000,
+    "regular_capacity": 5000,
+    "diesel_capacity": 5000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 32,
+  "fields": {
+    "cluster": 8,
+    "name": "PG Kabankalan",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 16000,
+    "regular_capacity": 24000,
+    "diesel_capacity": 16000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 33,
+  "fields": {
+    "cluster": 8,
+    "name": "P77 Kabankalan",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 24000,
+    "regular_capacity": 10000,
+    "diesel_capacity": 16000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 34,
+  "fields": {
+    "cluster": null,
+    "name": "Station Pinoy",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 0,
+    "regular_capacity": 0,
+    "diesel_capacity": 0,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 35,
+  "fields": {
+    "cluster": 9,
+    "name": "Bandoy Gas Station Tapi",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 15000,
+    "regular_capacity": 0,
+    "diesel_capacity": 5400,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 36,
+  "fields": {
+    "cluster": 9,
+    "name": "Bantayan Kabankalan T1",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 4000,
+    "regular_capacity": 0,
+    "diesel_capacity": 0,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 37,
+  "fields": {
+    "cluster": null,
+    "name": "Bantayan Kabankalan T2",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 4000,
+    "regular_capacity": 0,
+    "diesel_capacity": 0,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 38,
+  "fields": {
+    "cluster": 9,
+    "name": "Bantayan Kabankalan T2",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 4000,
+    "regular_capacity": 0,
+    "diesel_capacity": 0,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 49,
+  "fields": {
+    "cluster": 13,
+    "name": "RL Culipapa Hinobaan",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 10000,
+    "regular_capacity": 4000,
+    "diesel_capacity": 10000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 50,
+  "fields": {
+    "cluster": 14,
+    "name": "P77 Dumaguete",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 16000,
+    "regular_capacity": 16000,
+    "diesel_capacity": 16000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 51,
+  "fields": {
+    "cluster": 14,
+    "name": "Jetti Dumaguete",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 23000,
+    "regular_capacity": 23000,
+    "diesel_capacity": 23000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 52,
+  "fields": {
+    "cluster": 14,
+    "name": "PG Admin",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 16000,
+    "regular_capacity": 16000,
+    "diesel_capacity": 16000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 53,
+  "fields": {
+    "cluster": 15,
+    "name": "MJM Tayasan T1",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 4000,
+    "regular_capacity": 8000,
+    "diesel_capacity": 4000,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 57,
+  "fields": {
+    "cluster": 15,
+    "name": "MJM Tayasan T2",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 6000,
+    "regular_capacity": 4000,
+    "diesel_capacity": 0,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 58,
+  "fields": {
+    "cluster": 15,
+    "name": "MJM Tayasan T3",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 0,
+    "regular_capacity": 10000,
+    "diesel_capacity": 0,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 59,
+  "fields": {
+    "cluster": 15,
+    "name": "MJM La Libertad",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 3800,
+    "regular_capacity": 7800,
+    "diesel_capacity": 3800,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 60,
+  "fields": {
+    "cluster": 12,
+    "name": "P77 Tabu T1",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 7700,
+    "regular_capacity": 0,
+    "diesel_capacity": 3800,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 61,
+  "fields": {
+    "cluster": 12,
+    "name": "P77 Tabu T2",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 10000,
+    "regular_capacity": 0,
+    "diesel_capacity": 0,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.station",
+  "pk": 62,
+  "fields": {
+    "cluster": 12,
+    "name": "GTN Candoni",
+    "tank_capacity": 0,
+    "address": null,
+    "premium_capacity": 15000,
+    "regular_capacity": 0,
+    "diesel_capacity": 5400,
+    "allowed_tanks": "T1,T2,T3"
+  }
+},
+{
+  "model": "account.customuser",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$p7129AtgZiLKMzjkzyrjfA$T1QOk5c5jSrA6CZPYN6+asXxptNPT4AxagocAOAfaMs=",
+    "last_login": "2026-04-16T00:14:36.641Z",
+    "is_superuser": false,
+    "username": "Juan",
+    "email": "pinoyjuven13@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-10T01:17:10.421Z",
+    "role": "staff",
+    "activation_sent_at": null,
+    "is_activated": true,
+    "first_name": "Juan",
+    "last_name": "de La Cruz",
+    "groups": [],
+    "user_permissions": [],
+    "station": [
+      9
+    ]
+  }
+},
+{
+  "model": "account.customuser",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$iclXE8DJWCgqRxoENwztNl$/deu+zKIyz0R0x6nserHN/ZgZ+oPEKHql9zieORRLAU=",
+    "last_login": "2026-04-11T06:52:32.947Z",
+    "is_superuser": false,
+    "username": "Noypi",
+    "email": "noypijerome@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-13T05:45:50.581Z",
+    "role": "staff",
+    "activation_sent_at": null,
+    "is_activated": true,
+    "first_name": "Noypi",
+    "last_name": "Jerome",
+    "groups": [],
+    "user_permissions": [],
+    "station": [
+      2
+    ]
+  }
+},
+{
+  "model": "account.customuser",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$65iNzUCshZDiS91fbfQsOV$QEAyh97vfaUv6XgrcxjqWRQkPZU4bV1KK/MviaZTauk=",
+    "last_login": "2026-04-17T02:08:45.044Z",
+    "is_superuser": true,
+    "username": "Juven",
+    "email": "juvenpinoy@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-20T07:16:50Z",
+    "role": "admin",
+    "activation_sent_at": null,
+    "is_activated": true,
+    "first_name": "",
+    "last_name": "",
+    "groups": [],
+    "user_permissions": [],
+    "station": []
+  }
+},
+{
+  "model": "account.customuser",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$T2665oRXKKs7cC0A2deJlV$04slSeKps2Sh196yL8gE8d2cuNSb/4uP/sqveOgX49Y=",
+    "last_login": "2026-04-17T07:35:32.440Z",
+    "is_superuser": false,
+    "username": "Jerome",
+    "email": "jeromepinoy042@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-31T00:57:01Z",
+    "role": "staff",
+    "activation_sent_at": null,
+    "is_activated": true,
+    "first_name": "Jerome",
+    "last_name": "Pinoy",
+    "groups": [],
+    "user_permissions": [],
+    "station": [
+      16
+    ]
+  }
+},
+{
+  "model": "account.customuser",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ccJDRP7p4Sj8TrikjL3EwN$JV3gKMkuFs5DrOqzgAWm0V03YBYfqeCGzpy079JUAH8=",
+    "last_login": "2026-04-15T01:26:13.500Z",
+    "is_superuser": false,
+    "username": "Nonoy",
+    "email": "pinoyjuven14@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-01T01:31:53.238Z",
+    "role": "staff",
+    "activation_sent_at": null,
+    "is_activated": true,
+    "first_name": "Pinoy",
+    "last_name": "Juven",
+    "groups": [],
+    "user_permissions": [],
+    "station": [
+      53,
+      57,
+      58
+    ]
+  }
+},
+{
+  "model": "account.customuser",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$c3UzVrGuNq1ddezrp18Y6e$0xUJktOdsbtHh0WcMbXMfdVxzuDkQK6pqL8vGxfDhR8=",
+    "last_login": "2026-04-15T01:18:46.709Z",
+    "is_superuser": false,
+    "username": "Pinoy",
+    "email": "pinoyjuven14@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-07T06:41:51.454Z",
+    "role": "staff",
+    "activation_sent_at": null,
+    "is_activated": true,
+    "first_name": "Balut",
+    "last_name": "Pinoy",
+    "groups": [],
+    "user_permissions": [],
+    "station": [
+      60,
+      61
+    ]
+  }
+},
+{
+  "model": "account.customuser",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$YOscqyPcNslAbkWfn8btwD$0iQRNDMNPCXpV7QuOtGBt7m0j1A48dclggIhlQteaIQ=",
+    "last_login": "2026-04-17T00:49:18.147Z",
+    "is_superuser": false,
+    "username": "Juven10",
+    "email": "juvenpinoy10@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-04-17T00:47:28.276Z",
+    "role": "staff",
+    "activation_sent_at": "2026-04-17T00:47:29.171Z",
+    "is_activated": true,
+    "first_name": "Venju",
+    "last_name": "Pinoy",
+    "groups": [],
+    "user_permissions": [],
+    "station": []
+  }
+}
+]

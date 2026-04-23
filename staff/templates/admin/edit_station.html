@@ -1,0 +1,114 @@
+{% extends 'main/base_admin.html' %}
+{% block title %}Edit Station{% endblock %}
+
+{% block content %}
+<style>
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+<div class="container-fluid mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="card shadow-lg border-0">
+
+                <div class="card-header text-white text-center"
+                     style="background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);">
+                    <h4>🏪 Edit Station</h4>
+                    <small>P77 Petroleum Distribution Inc.</small>
+                </div>
+
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+
+                        <div class="row">
+
+                            <!-- LEFT — Station Info -->
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-header bg-primary text-white text-center">
+                                        📋 Station Info
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div class="mb-3">
+                                            <label class="fw-bold" style="font-size:14px;">🗂️ Cluster</label>
+                                            {{ form.cluster }}
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="fw-bold" style="font-size:14px;">🏪 Station Name</label>
+                                            {{ form.name }}
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="fw-bold" style="font-size:14px;">👤 Select User</label>
+                                            {{ form.user }}
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- RIGHT — Capacities -->
+                            <div class="col-md-6">
+                                <div class="card h-100 border-primary">
+                                    <div class="card-header bg-primary text-white text-center">
+                                        ⛽ Tank Capacities
+                                    </div>
+                                    <div class="card-body">
+
+                                        <div class="mb-3">
+                                            <label class="fw-bold text-danger" style="font-size:14px;">
+                                                🔴 Premium Capacity
+                                            </label>
+                                            {{ form.premium_capacity }}
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="fw-bold text-success" style="font-size:14px;">
+                                                🟢 Regular Capacity
+                                            </label>
+                                            {{ form.regular_capacity }}
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="fw-bold text-warning" style="font-size:14px;">
+                                                🟡 Diesel Capacity
+                                            </label>
+                                            {{ form.diesel_capacity }}
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex gap-2 mt-3">
+                            <button type="submit" class="btn btn-primary w-100">
+                                💾 Save Changes
+                            </button>
+                            <a href="{% url 'adminpanel:station_list' %}" class="btn btn-outline-secondary w-100">
+                                ❌ Cancel
+                            </a>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,139 @@
+{% extends "main/base_staff.html" %}
+{% load static %}
+
+{% block title %}
+    My Profile
+{% endblock %}
+
+{% block content %}
+
+<style>
+
+    .profile-card {
+        border-radius: 12px;
+    }
+
+    .profile-avatar {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #f1f1f1;
+        transition: 0.3s;
+    }
+
+    .profile-avatar:hover {
+        transform: scale(1.05);
+    }
+
+    .profile-info {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+</style>
+
+
+<div class="container mt-4">
+
+    <h2 class="mb-4 fw-bold">
+        <i class="fa-solid fa-user"></i> My Profile
+    </h2>
+
+    <div class="card shadow profile-card p-4">
+
+        <div class="row align-items-center">
+
+            <!-- LEFT SIDE -->
+            <div class="col-md-4 text-center">
+
+                {% if form.instance.profile_pic and form.instance.profile_pic.url != '/media/default.jpg' %}
+                    <img src="{{ form.instance.profile_pic.url }}" class="profile-avatar mb-3">
+                {% else %}
+                    <img src="{% static 'images/avatar.png' %}" class="profile-avatar mb-3">
+                {% endif %}
+
+                <h4 class="fw-bold">
+                    {{ request.user.username }}
+                </h4>
+
+                <p class="text-muted">
+                    {{ request.user.email }}
+                </p>
+
+                <div class="profile-info mt-3">
+
+                    <p class="mb-1">
+                        <strong>
+                            <i class="fa-solid fa-gas-pump"></i> Station:
+                        </strong>
+                        {{ request.user.station }}
+                    </p>
+
+                    <p class="mb-1">
+                        <strong>
+                            <i class="fa-solid fa-id-card"></i> Employee ID:
+                        </strong>
+                        {{ request.user.profile.employee_id }}
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="col-md-8">
+
+                <form method="POST" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">
+                            <i class="fa-solid fa-image"></i> Profile Picture
+                        </label>
+                        {{ form.profile_pic }}
+                    </div>
+
+                    <div class="mb-3 row align-items-center">
+
+                        <label class="col-sm-3 col-form-label fw-bold">
+                            <i class="fa-solid fa-phone"></i> Phone Number :
+                        </label>
+
+                        <div class="col-sm-9">
+                            {{ form.phone_number }}
+                        </div>
+
+                    </div>
+
+
+                    <div class="mb-3 row align-items-center">
+
+                        <label class="col-sm-3 col-form-label fw-bold">
+                            <i class="fa-solid fa-briefcase"></i> Position :
+                        </label>
+
+                        <div class="col-sm-9">
+                            {{ form.position }}
+                        </div>
+
+                    </div>
+
+                    <button class="btn btn-primary px-4">
+                        <i class="fa-solid fa-floppy-disk"></i> Update Profile
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

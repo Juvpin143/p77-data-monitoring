@@ -1,0 +1,106 @@
+{% extends 'main/base_admin.html' %}
+{% block title %}Stations{% endblock %}
+
+{% block content %}
+<style>
+    .page-header {
+        width: 100%;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        padding: 40px 35px;
+        border-radius: 18px;
+        color: white;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+        margin-bottom: 35px;
+    }
+</style>
+
+<div class="container-fluid">
+
+    <!-- Hero Header -->
+    <div class="page-header shadow-sm">
+        <h1>🏪 Station Management</h1>
+        <p class="mb-1">Welcome, <b>{{ request.user.username }}</b> 👋</p>
+        <p class="mb-1" style="font-size:15px; opacity:0.9;">
+            Monitor All Stations & Their Assigned Staff ⛽
+        </p>
+        <p class="mb-0" style="font-size:13px; opacity:0.75;">
+            {% if request.GET.q %}
+                Showing {{ stations.count }} result{{ stations.count|pluralize }} for "{{ request.GET.q }}"
+            {% else %}
+                System Control Panel — {{ stations.count }} Station{{ stations.count|pluralize }} Total
+            {% endif %}
+        </p>
+    </div>
+
+    <form method="GET" class="mb-3 d-flex gap-2">
+        <input type="text" name="q" class="form-control"
+               placeholder="Search station or cluster..."
+               value="{{ request.GET.q }}">
+        <button class="btn btn-primary">Search</button>
+        {% if request.GET.q %}
+            <a href="{% url 'adminpanel:station_list' %}" class="btn btn-secondary">Clear</a>
+        {% endif %}
+    </form>
+
+    <!-- Table -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-0">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-dark text-uppercase small">
+                    <tr>
+                        <th class="ps-4">Cluster</th>
+                        <th>Station Name</th>
+                        <th>Premium Capacity</th>
+                        <th>Regular Capacity</th>
+                        <th>Diesel Capacity</th>
+                        <th>Assigned Staff</th>
+                        <th class="text-end pe-4">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for station in stations %}
+                    <tr>
+                        <td class="ps-4">
+                            <span class="badge bg-primary">{{ station.cluster }}</span>
+                        </td>
+                        <td class="fw-semibold">{{ station.name }}</td>
+                        <td>{{ station.premium_capacity|default:"—" }}</td>
+                        <td>{{ station.regular_capacity|default:"—" }}</td>
+                        <td>{{ station.diesel_capacity|default:"—" }}</td>
+                        <td>
+                            {% for user in station.assigned_users.all %}
+                                <span class="badge bg-success">{{ user.username }}</span>
+                            {% empty %}
+                                <span class="badge bg-secondary">No Staff</span>
+                            {% endfor %}
+                        </td>
+                        <td class="text-end pe-4">
+                            <div class="d-flex gap-1 justify-content-end flex-nowrap">
+                                <a href="{% url 'adminpanel:edit_station' station.id %}"
+                                   class="btn btn-sm btn-outline-warning"
+                                   style="font-size:11px; white-space:nowrap;">
+                                    ✏️ Edit
+                                </a>
+                                <a href="{% url 'adminpanel:delete_station' station.id %}"
+                                   class="btn btn-sm btn-outline-danger"
+                                   style="font-size:11px; white-space:nowrap;"
+                                   onclick="return confirm('Delete {{ station.name }}?')">
+                                    🗑️ Delete
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="7" class="text-center py-4 text-muted">
+                            No stations yet.
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

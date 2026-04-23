@@ -1,0 +1,63 @@
+{% extends 'main/base_admin.html' %}
+{% block content %}
+
+<style>
+    .form-card label {
+        font-weight: 600;
+        color: #374151;
+        font-size: 14px;
+        margin-bottom: 6px;
+        display: block;
+    }
+    .form-card select {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+    }
+    .form-card select:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+    }
+</style>
+
+<div class="container-fluid mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-5 form-card">
+            <div class="card shadow-lg border-0">
+
+                <div class="card-header text-white text-center"
+                     style="background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);">
+                    <h4>👤 Assign User to Station</h4>
+                    <small>P77 Petroleum Distribution Inc.</small>
+                </div>
+
+                <div class="card-body p-4">
+                    <form method="POST">
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label>👤 Select User</label>
+                            {{ form.user }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label>🏪 Select Station</label>
+                            {{ form.station }}
+                        </div>
+
+                        <button class="btn btn-primary w-100 mt-2">
+                            ✅ Assign Station
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

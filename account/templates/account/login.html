@@ -1,0 +1,223 @@
+{% extends 'main/base_auth.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<style>
+body {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  width: 420px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  padding: 50px 40px;
+  border-radius: 26px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45);
+  animation: slideIn .6s ease;
+  color: white;
+}
+
+/* 🔥 OPTIONAL LOGO */
+.logo {
+  display: block;
+  margin: 0 auto 10px;
+  width: 65px;
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.login-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #c7d2fe;
+  margin-top: 5px;
+}
+
+.form-group {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  max-width: 320px;
+  margin: 0 auto 6px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.form-control {
+  max-width: 320px;
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 12px;
+  border: none;
+  padding: 13px 14px;
+  background: #eef2ff; /* 🔥 improved contrast */
+  color: #111;
+  transition: 0.25s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99,102,241,.4);
+  background: #fff;
+}
+
+.password-wrapper {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.password-wrapper .form-control {
+  width: 100%;
+  padding-right: 44px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #64748b;
+  transition: 0.2s;
+}
+
+.toggle-password:hover {
+  color: #1e293b;
+}
+
+.btn-login {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  margin: 15px auto 0;
+  padding: 13px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(99,102,241,.45);
+}
+
+.btn-login:active {
+  transform: scale(0.98);
+}
+
+.helper-links {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 14px;
+}
+
+.helper-links a {
+  color: #a5b4fc;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.helper-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 12px;
+  margin-top: 5px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+  padding: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+@keyframes slideIn {
+  from {opacity:0; transform: translateY(25px);}
+  to {opacity:1; transform: translateY(0);}
+}
+</style>
+
+<div class="login-wrapper">
+  <div class="login-card">
+
+    <!-- 🔥 OPTIONAL LOGO -->
+     <img src="{% static 'images/p77_logo.png' %}" class="logo">
+
+    <h2 class="login-title">P77 Data Monitoring</h2>
+    <p class="login-subtitle">Welcome to P77 — Send Your Data Fast & Easy!</p>
+
+    <form method="post">
+      {% csrf_token %}
+
+      <div class="form-group">
+        {{ form.username.label_tag }}
+        {{ form.username|add_class:"form-control"|attr:"placeholder:Enter username..." }}
+      </div>
+
+      <div class="form-group">
+        {{ form.password.label_tag }}
+        <div class="password-wrapper">
+          {{ form.password|add_class:"form-control"|attr:"placeholder:Enter password..." }}
+          <span class="toggle-password" onclick="togglePassword('id_password', this)">👁</span>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-login">Login</button>
+    </form>
+
+    <div class="helper-links">
+      <p><a href="{% url 'account:forgot_password' %}">Forgot password?</a></p>
+      <p>Don’t have an account?<br><a href="{% url 'account:register' %}">Sign up</a></p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function togglePassword(fieldId, icon) {
+  const input = document.getElementById(fieldId);
+  if(input.type === "password"){
+    input.type = "text";
+    icon.textContent = "🙈";
+  } else {
+    input.type = "password";
+    icon.textContent = "👁";
+  }
+}
+</script>
+
+{% endblock %}

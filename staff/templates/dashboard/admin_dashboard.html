@@ -1,0 +1,573 @@
+{% extends 'main/base_admin.html' %}
+{% load humanize %}
+{% load custom_filters %}
+{% block content %}
+
+<style>
+    .hero-header {
+        width: 100%;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        padding: 40px 35px;
+        border-radius: 18px;
+        color: white;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+        margin-bottom: 35px;
+    }
+
+    table {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    /* FIRST HEADER */
+    thead tr:nth-child(1) th {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    /* SECOND HEADER */
+    thead tr:nth-child(2) th {
+        position: sticky;
+        top: 50px; /* adjust */
+        z-index: 9;
+    }
+
+    thead th {
+        background: white; /* fallback */
+    }
+
+    /* Sticky first column (Cluster) */
+    td:nth-child(1),
+    th:nth-child(1) {
+        position: sticky;
+        left: 0;
+        background: #f8fafc;
+        z-index: 11;
+    }
+
+    /* Sticky second column (Station) */
+    td:nth-child(2),
+    th:nth-child(2) {
+        position: sticky;
+        left: 45px; /* width ng first column */
+        background: #f8fafc;
+        z-index: 11;
+    }
+
+    /* BODY ONLY (correct na to) */
+    td:nth-child(7),
+    td:nth-child(12),
+    td:nth-child(17) {
+        border-right: 3px solid black !important;
+    }
+
+    .area-row td {
+        background: white !important;
+        color: #1d4ed8 !important;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    th {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    table td, table th {
+        border: 1px solid #9ca3af !important;
+        padding: 4px;
+    }
+
+    td {
+        text-align: right;
+        font-size: 13px;
+    }
+
+    th {
+        text-align: center;
+        vertical-align: middle !important;
+    }
+
+    thead th {
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        text-align: center;
+        vertical-align: middle !important;
+        white-space: nowrap; /* 🔥 important */
+    }
+
+    .bg-danger {
+        background-color: #ef4444 !important;
+        color: black !important;
+    }
+
+    .bg-light-danger {
+        background-color: #eb8977 !important;
+    }
+
+    .bg-orange {
+        background-color: #fb923c !important;
+        color: black !important;
+    }
+
+    .bg-light-success {
+        background-color: #68f249 !important;
+    }
+
+    .bg-success {
+        background-color: #22c55e !important;
+        color: black !important;
+    }
+
+    .bg-secondary {
+        background-color: #e5e7eb !important;
+    }
+
+    /*  Remove arrows (spinner) */
+
+    /* Chrome, Safari, Edge */
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    .total {
+        text-align: center;
+    }
+
+    .dispatch-col {
+        width: 45px !important;
+        max-width: 45px !important;
+        padding: 2px !important;
+    }
+
+    .dispatch-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    .dispatch-wrapper input {
+        width: 50px !important;
+        border: none !important;
+        border-right: 1px solid #ccc !important;
+        text-align: center !important;
+        background: transparent;
+        padding: 2px !important;
+    }
+
+    .dispatch-wrapper input:last-child {
+        border-right: none !important;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+        width: 45px !important;
+        max-width: 45px !important;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    th:nth-child(1) {
+        word-break: break-all;
+        white-space: normal;
+        font-size: 12px;
+    }
+
+    .dispatch-col {
+        width: 35px !important;
+        max-width: 35px !important;
+        padding: 2px !important;
+        text-align: center;
+    }
+
+    .dispatch-header {
+        text-align: center;
+    }
+
+    .vacancy-header {
+        width: 60px !important;
+        max-width: 60px !important;
+        padding: 2px !important;
+        text-align: center;
+    }
+
+    .vacancy-header {
+        text-align: center;
+    }
+
+    .vacancy-col {
+        width: 60px !important;
+        max-width: 60px !important;
+        text-align: center !important;
+        padding: 2px !important;
+    }
+
+    .datetime-col {
+        text-align: center !important;
+    }
+
+    .end-border {
+        border-right: 3px solid black !important;
+    }
+
+</style>
+
+<div class="hero-header">
+    <div class="hero-content">
+        <h1>Admin Dashboard</h1>
+
+        <p class="welcome">
+            Hello Admin, <b>"{{ request.user.username }}"</b> 👋
+        </p>
+
+        <p class="hero-subtitle">
+            Oversee All Fuel Data & Monitor Station Performance 📊
+        </p>
+
+        <p class="station">
+            System Control Panel — All Stations Connected
+        </p>
+    </div>
+</div>
+
+<div class="container mt-4">
+
+    <table class="table table-bordered text-center align-middle">
+
+        <thead>
+            <tr>
+                <th rowspan="2">Cluster</th>
+                <th rowspan="2">Station</th>
+
+                <th colspan="5" style="background:#ef4444;color:black;">Premium 95</th>
+                <th colspan="5" style="background:#22c55e;color:black;">Regular 91</th>
+                <th colspan="5" style="background:#ede67d;color:black;">Diesel</th>
+
+                <th rowspan="2">Date & Time</th>
+            </tr>
+
+            <tr>
+                <th colspan="1" style="background:#ef4444">Tank</th>
+                <th colspan="1" style="background:#ef4444">Liters</th>
+                <th colspan="1" class="vacancy-header" style="background:#ef4444">Vacancy</th>
+                <th colspan="2" class="dispatch-header end-border" style="background:#ef4444">Dispatch</th>
+
+                <th colspan="1" style="background:#22c55e">Tank</th>
+                <th colspan="1" style="background:#22c55e">Liters</th>
+                <th colspan="1" class="vacancy-header" style="background:#22c55e">Vacancy</th>
+                <th colspan="2" class="dispatch-header end-border" style="background:#22c55e">Dispatch</th>
+
+                <th colspan="1" style="background:#ede67d">Tank</th>
+                <th colspan="1" style="background:#ede67d">Liters</th>
+                <th colspan="1" class="vacancy-header" style="background:#ede67d">Vacancy</th>
+                <th colspan="2" class="dispatch-header end-border" style="background:#ede67d">Dispatch</th>
+            </tr>
+            <tr style="background:#1e293b; color:white; font-weight:bold;">
+                <th></th>
+                <th style="text-align:left; font-size:11px; white-space:nowrap;"></th>
+                <th></th><th></th><th></th>
+                <th class="grand-p1" style="text-align:center;">0</th>
+                <th class="grand-p2 end-border" style="text-align:center;">0</th>
+                <th></th><th></th><th></th>
+                <th class="grand-r1" style="text-align:center;">0</th>
+                <th class="grand-r2 end-border" style="text-align:center;">0</th>
+                <th></th><th></th><th></th>
+                <th class="grand-d1" style="text-align:center;">0</th>
+                <th class="grand-d2 end-border" style="text-align:center;">0</th>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% regroup stations by area as area_list %}
+
+            {% for area in area_list %}
+
+                <tr class="area-row">
+                    <td colspan="18" class="text-start fw-bold">
+                        {{ area.grouper }}
+                    </td>
+                </tr>
+
+                {% for station in area.list %}
+                <tr>
+
+                    <td class="fw-bold text-center" style="width: 30px;">
+                        {{ station.cluster_code }}
+                    </td>
+
+                    <td class="text-start fw-bold" style="width: 40px;">
+                        {{ station.name }}
+                    </td>
+
+                    <!-- PREMIUM -->
+                    <td>{% if station.premium_capacity %}{{ station.premium_capacity }}{% endif %}</td>
+                    <td class="bg-{{ station.premium_color }}">
+                        {% if station.premium %}{{ station.premium }}{% endif %}
+                    </td>
+                    <td class="vacancy-col" style="background:#ff01011f;color:black;">
+                        {% if station.premium_vacancy %}{{ station.premium_vacancy }}{% endif %}
+                    </td>
+                    <td class="dispatch-col">
+                        <input type="number" class="dispatch-input"
+                            data-station="{{ station.id }}" data-fuel="Premium" data-field="dispatch"
+                            value="{% if station.premium_dispatch %}{{ station.premium_dispatch }}{% endif %}"
+                            style="width:20px; border:none; text-align:center; background:transparent;"
+                            {% if request.user.role == 'viewer' %}disabled{% endif %}>
+                    </td>
+                    <td class="dispatch-col">
+                        <input type="number" class="dispatch-input"
+                            data-station="{{ station.id }}" data-fuel="Premium" data-field="dispatch2"
+                            value="{% if station.premium_dispatch2 %}{{ station.premium_dispatch2 }}{% endif %}"
+                            style="width:20px; border:none; text-align:center; background:transparent;"
+                            {% if request.user.role == 'viewer' %}disabled{% endif %}>
+                    </td>
+
+                    <!-- REGULAR -->
+                    <td>{% if station.regular_capacity %}{{ station.regular_capacity }}{% endif %}</td>
+                    <td class="bg-{{ station.regular_color }}">
+                        {% if station.regular %}{{ station.regular }}{% endif %}
+                    </td>
+                    <td class="vacancy-col" style="background:#d2f7e2;color:black;">
+                        {% if station.regular_vacancy %}{{ station.regular_vacancy }}{% endif %}
+                    </td>
+                    <td class="dispatch-col">
+                        <input type="number" class="dispatch-input"
+                            data-station="{{ station.id }}" data-fuel="Regular" data-field="dispatch"
+                            value="{% if station.regular_dispatch %}{{ station.regular_dispatch }}{% endif %}"
+                            style="width:20px; border:none; text-align:center; background:transparent;"
+                            {% if request.user.role == 'viewer' %}disabled{% endif %}>
+                    </td>
+                    <td class="dispatch-col">
+                        <input type="number" class="dispatch-input"
+                            data-station="{{ station.id }}" data-fuel="Regular" data-field="dispatch2"
+                            value="{% if station.regular_dispatch2 %}{{ station.regular_dispatch2 }}{% endif %}"
+                            style="width:20px; border:none; text-align:center; background:transparent;"
+                            {% if request.user.role == 'viewer' %}disabled{% endif %}>
+                    </td>
+
+
+                    <!-- DIESEL -->
+                    <td>{% if station.diesel_capacity %}{{ station.diesel_capacity }}{% endif %}</td>
+                    <td class="bg-{{ station.diesel_color }}">
+                        {% if station.diesel %}{{ station.diesel }}{% endif %}
+                    </td>
+                    <td class="vacancy-col" style="background:#f0f0c8;color:black;">
+                        {% if station.diesel_vacancy %}{{ station.diesel_vacancy }}{% endif %}
+                    </td>
+                    <td class="dispatch-col">
+                        <input type="number" class="dispatch-input"
+                            data-station="{{ station.id }}" data-fuel="Diesel" data-field="dispatch"
+                            value="{% if station.diesel_dispatch %}{{ station.diesel_dispatch }}{% endif %}"
+                            style="width:20px; border:none; text-align:center; background:transparent;"
+                            {% if request.user.role == 'viewer' %}disabled{% endif %}>
+                    </td>
+                    <td class="dispatch-col">
+                        <input type="number" class="dispatch-input"
+                            data-station="{{ station.id }}" data-fuel="Diesel" data-field="dispatch2"
+                            value="{% if station.diesel_dispatch2 %}{{ station.diesel_dispatch2 }}{% endif %}"
+                            style="width:20px; border:none; text-align:center; background:transparent;"
+                            {% if request.user.role == 'viewer' %}disabled{% endif %}>
+                    </td>
+
+                    <td class="datetime-col">
+                        {{ station.created_at|date:"M d, Y h:i A" }}
+                    </td>
+
+                </tr>
+                {% endfor %}
+
+                <tr class="total-row" style="background:#1e293b; color:white; font-weight:bold; text-align:center;">
+                    <td></td><td></td>
+                    <td></td><td></td><td></td>
+                    <td class="total-p1" style="text-align:center;">
+                        {{ area_dispatch_totals|get_item:area.grouper|get_item:"premium_total"|default:0 }}
+                    </td>
+                    <td class="total-p2" style="text-align:center;">0</td>
+                    <td></td><td></td><td></td>
+                    <td class="total-r1" style="text-align:center;">
+                        {{ area_dispatch_totals|get_item:area.grouper|get_item:"regular_total"|default:0 }}
+                    </td>
+                    <td class="total-r2" style="text-align:center;">0</td>
+                    <td></td><td></td><td></td>
+                    <td class="total-d1" style="text-align:center;">
+                        {{ area_dispatch_totals|get_item:area.grouper|get_item:"diesel_total"|default:0 }}
+                    </td>
+                    <td class="total-d2" style="text-align:center;">0</td>
+                    <td></td>
+                </tr>
+
+            {% empty %}
+                <tr>
+                    <td colspan="19" class="text-center py-4">
+                        No data yet
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script>
+const CSRF_TOKEN = '{{ csrf_token }}';
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    function recalcAreaTotals() {
+        let grandP1=0, grandP2=0, grandR1=0, grandR2=0, grandD1=0, grandD2=0;
+
+        document.querySelectorAll('tr.area-row').forEach(function (areaRow) {
+            let p1=0, p2=0, r1=0, r2=0, d1=0, d2=0;
+
+            let row = areaRow.nextElementSibling;
+            while (row && !row.classList.contains('area-row') && !row.classList.contains('total-row')) {
+                const inputs = row.querySelectorAll('input.dispatch-input');
+                if (inputs[0]) p1 += parseFloat(inputs[0].value) || 0;
+                if (inputs[1]) p2 += parseFloat(inputs[1].value) || 0;
+                if (inputs[2]) r1 += parseFloat(inputs[2].value) || 0;
+                if (inputs[3]) r2 += parseFloat(inputs[3].value) || 0;
+                if (inputs[4]) d1 += parseFloat(inputs[4].value) || 0;
+                if (inputs[5]) d2 += parseFloat(inputs[5].value) || 0;
+                row = row.nextElementSibling;
+            }
+
+            // ✅ Per-area total (nasa ilalim ng bawat cluster)
+            if (row && row.classList.contains('total-row')) {
+                row.querySelector('.total-p1').textContent = p1;
+                row.querySelector('.total-p2').textContent = p2;
+                row.querySelector('.total-r1').textContent = r1;
+                row.querySelector('.total-r2').textContent = r2;
+                row.querySelector('.total-d1').textContent = d1;
+                row.querySelector('.total-d2').textContent = d2;
+            }
+
+            // ✅ I-add sa grand total
+            grandP1 += p1; grandP2 += p2;
+            grandR1 += r1; grandR2 += r2;
+            grandD1 += d1; grandD2 += d2;
+        });
+
+        // ✅ Overall Grand Total sa thead
+        document.querySelector('.grand-p1').textContent = grandP1;
+        document.querySelector('.grand-p2').textContent = grandP2;
+        document.querySelector('.grand-r1').textContent = grandR1;
+        document.querySelector('.grand-r2').textContent = grandR2;
+        document.querySelector('.grand-d1').textContent = grandD1;
+        document.querySelector('.grand-d2').textContent = grandD2;
+    }
+
+    recalcAreaTotals();
+
+    function saveDispatch(input) {
+        const newValue = input.value;
+        const original = input.dataset.original;
+        if (newValue === original) return;
+
+        const stationId = input.dataset.station;
+        const fuelType  = input.dataset.fuel;
+        const field     = input.dataset.field; // 'dispatch' o 'dispatch2'
+
+        fetch("{% url 'adminpanel:update_dispatch' %}", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': CSRF_TOKEN,
+            },
+            body: `station_id=${stationId}&fuel_type=${fuelType}&${field}=${newValue}`
+        })
+        .then(response => {
+            if (response.ok) {
+                input.dataset.original = newValue;
+                input.style.background = '#d1fae5';
+                setTimeout(() => input.style.background = '', 800);
+            }
+        })
+        .catch(() => {
+            input.style.background = '#fee2e2';
+            setTimeout(() => input.style.background = '', 800);
+        });
+    }
+
+    document.querySelectorAll('input.dispatch-input').forEach(function (input) {
+        input.addEventListener('input', recalcAreaTotals);
+        input.addEventListener('blur', function () { saveDispatch(this); });
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') { e.preventDefault(); this.blur(); }
+        });
+    });
+
+});
+</script>
+
+<script>
+function hideEmptyFuelColumns() {
+    const fuelGroups = [
+        { name: "premium", start: 2, count: 5 },
+        { name: "regular", start: 7, count: 5 },
+        { name: "diesel",  start: 12, count: 5 }
+    ];
+
+    fuelGroups.forEach(group => {
+        let hasData = false;
+
+        document.querySelectorAll("tbody tr").forEach(row => {
+            if (row.classList.contains("area-row") || row.classList.contains("total-row")) return;
+
+            const cells = row.querySelectorAll("td");
+            for (let i = group.start; i < group.start + group.count; i++) {
+                let cell = cells[i];
+                if (!cell) continue;
+
+                let value = cell.innerText.trim();
+                let input = cell.querySelector("input");
+                if (input) value = input.value;
+
+                if (value !== "" && value !== "0" && value !== "0.0") {
+                    hasData = true;
+                }
+            }
+        });
+
+        if (!hasData) {
+            document.querySelectorAll("tbody tr, thead tr").forEach(row => {
+                let cells = row.children;
+                for (let i = group.start; i < group.start + group.count; i++) {
+                    if (cells[i]) cells[i].style.display = "none";
+                }
+            });
+
+            const headerRow = document.querySelector("thead tr:first-child");
+            if (headerRow) {
+                // Col index: Premium=2, Regular=7, Diesel=12 → header index: 2,3,4
+                const headerIndex = group.start === 2 ? 2 : group.start === 7 ? 3 : 4;
+                const headerCells = headerRow.children;
+                if (headerCells[headerIndex]) {
+                    headerCells[headerIndex].style.display = "none";
+                }
+            }
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(hideEmptyFuelColumns, 100);
+});
+</script>
+
+{% endblock %}

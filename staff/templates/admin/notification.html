@@ -1,0 +1,105 @@
+{% extends 'main/base_admin.html' %}
+{% block title %}Notifications{% endblock %}
+
+{% block content %}
+<style>
+    .page-header {
+        width: 100%;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        padding: 40px 35px;
+        border-radius: 18px;
+        color: white;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+        margin-bottom: 35px;
+    }
+
+    .notif-item {
+        border-left: 4px solid #e5e7eb;
+        transition: 0.2s;
+    }
+
+    .notif-item.unread {
+        border-left: 4px solid #2563eb;
+        background: #f0f4ff;
+    }
+
+    .notif-item:hover {
+        background: #f8fafc;
+    }
+</style>
+
+<div class="container-fluid">
+
+    <!-- Hero Header -->
+    <div class="page-header shadow-sm">
+        <h1>🔔 Notifications</h1>
+        <p class="mb-1">Welcome, <b>{{ request.user.username }}</b> 👋</p>
+        <p class="mb-1" style="font-size:15px; opacity:0.9;">
+            Stay Updated on Staff Reports & System Activities 📋
+        </p>
+        <p class="mb-0" style="font-size:13px; opacity:0.75;">
+            System Control Panel — {{ unread_count }} Unread Notification{{ unread_count|pluralize }}
+        </p>
+    </div>
+
+    <!-- Mark All + Count -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted" style="font-size:14px;">
+            {{ notifications.count }} Total Notification{{ notifications.count|pluralize }}
+        </span>
+        {% if unread_count > 0 %}
+        <form method="POST" action="{% url 'mark_all_as_read' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-sm btn-outline-primary">
+                ✅ Mark All as Read
+            </button>
+        </form>
+        {% endif %}
+    </div>
+
+    <!-- Notification List -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-0">
+
+            {% for notif in notifications %}
+            <div class="notif-item p-3 border-bottom {% if not notif.is_read %}unread{% endif %}">
+                <div class="d-flex justify-content-between align-items-start">
+
+                    <div>
+                        <p class="mb-1 fw-semibold" style="font-size:14px;">
+                            {{ notif.message }}
+                        </p>
+                        <small class="text-muted">
+                            🕐 {{ notif.created_at|date:"M d, Y h:i A" }}
+                        </small>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2 ms-3">
+                        {% if not notif.is_read %}
+                            <span class="badge bg-warning text-dark">New 🔔</span>
+                            <form method="POST" action="{% url 'mark_as_read' notif.id %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-sm btn-outline-primary"
+                                        style="font-size:11px; white-space:nowrap;">
+                                    Mark as Read
+                                </button>
+                            </form>
+                        {% else %}
+                            <span class="badge bg-success">Read ✅</span>
+                        {% endif %}
+                    </div>
+
+                </div>
+            </div>
+            {% empty %}
+            <div class="text-center py-5 text-muted">
+                <i class="fa-solid fa-bell-slash" style="font-size:40px; opacity:0.3;"></i>
+                <p class="mt-3">No notifications yet 🔕</p>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}

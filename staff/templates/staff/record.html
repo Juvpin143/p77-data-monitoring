@@ -1,0 +1,366 @@
+{% extends 'main/base_admin.html' %}
+{% load humanize %}
+{% load custom_filters %}
+{% block content %}
+
+<style>
+    .hero-header {
+        width: 100%;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        padding: 40px 35px;
+        border-radius: 18px;
+        color: white;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+        margin-bottom: 35px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .area-row td {
+        background: white !important;
+        color: #1d4ed8 !important;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    th {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    table td, table th {
+        border: 1px solid #9ca3af !important;
+        padding: 4px;
+    }
+
+    td {
+        text-align: right;
+        font-size: 13px;
+    }
+
+    /* ❌ Remove arrows (spinner) sa number input */
+
+    /* Chrome, Safari, Edge */
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    .total {
+        text-align: center;
+    }
+
+    .dispatch-cell {
+        display: flex;
+        gap: 2px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dispatch-cell input {
+        width: 50px !important;
+        border: none !important;
+        text-align: center;
+        background: transparent;
+    }
+
+    .dispatch-cell input:first-child {
+        border-right: 1px solid #ccc !important;
+    }
+</style>
+
+<div class="hero-header">
+    <div class="hero-content">
+        <h1>Admin Dashboard</h1>
+
+        <p class="welcome">
+            Welcome, <b>{{ request.user.username }}</b> 👋
+        </p>
+
+        <p class="hero-subtitle">
+            Oversee All Fuel Data & Monitor Station Performance 📊
+        </p>
+
+        <p class="station">
+            System Control Panel — All Stations Connected
+        </p>
+    </div>
+</div>
+
+<div class="container mt-4">
+
+    <table class="table table-bordered text-center align-middle">
+
+        <thead>
+            <tr>
+                <th rowspan="2">Cluster</th>
+                <th rowspan="2">Station</th>
+
+                <th colspan="4" style="background:#ef4444;color:white;">Premium 95</th>
+                <th colspan="4" style="background:#22c55e;color:white;">Regular 91</th>
+                <th colspan="4" style="background:#eab308;color:white;">Diesel</th>
+
+                <th rowspan="2">Date & Time</th>
+            </tr>
+
+            <tr>
+                <th colspan="1" style="background:#ef4444">Tank</th>
+                <th colspan="1" style="background:#ef4444">Liters</th>
+                <th colspan="1" style="background:#ef4444">Vacancy</th>
+                <th colspan="1" style="background:#ef4444">Dispatch</th>
+
+                <th colspan="1" style="background:#22c55e">Tank</th>
+                <th colspan="1" style="background:#22c55e">Liters</th>
+                <th colspan="1" style="background:#22c55e">Vacancy</th>
+                <th colspan="1" style="background:#22c55e">Dispatch</th>
+
+                <th colspan="1" style="background:#eab308">Tank</th>
+                <th colspan="1" style="background:#eab308">Liters</th>
+                <th colspan="1" style="background:#eab308">Vacancy</th>
+                <th colspan="1" style="background:#eab308">Dispatch</th>
+            </tr>
+
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            {% regroup stations by area as area_list %}
+
+            {% for area in area_list %}
+
+                <tr class="area-row">
+                    <td colspan="16" class="text-start fw-bold">
+                        {{ area.grouper }}
+                    </td>
+                </tr>
+
+                {% for station in area.list %}
+                <tr>
+
+                    <td class="fw-bold text-center">
+                        {{ station.cluster_code }}
+                    </td>
+
+                    <td class="text-start fw-bold">
+                        {{ station.name }}
+                    </td>
+
+                    <!-- PREMIUM -->
+                    <td>{{ station.premium_capacity }}</td>
+                    <td class="text-{{ station.premium_color }} fw-bold">
+                        {{ station.premium }}
+                    </td>
+                    <td>{{ station.premium_vacancy }}</td>
+                    <td class="dispatch-cell">
+                        <form method="POST" action="{% url 'update_dispatch' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="station_id" value="{{ station.id }}">
+                            <input type="hidden" name="fuel_type" value="Premium">
+                           <input type="number"
+                                   class="dispatch-input"
+                                   data-station="{{ station.id }}"
+                                   data-fuel="Premium"
+                                   data-field="dispatch"
+                                   value="{{ station.premium_dispatch }}"
+                                   data-original="{{ station.premium_dispatch }}"
+                                   style="width:55px; border:none; border-right:1px solid #ccc; text-align:center;">
+                            <input type="number"
+                                   class="dispatch-input"
+                                   data-station="{{ station.id }}"
+                                   data-fuel="Premium"
+                                   data-field="dispatch2"
+                                   value="{{ station.premium_dispatch2 }}"
+                                   data-original="{{ station.premium_dispatch2 }}"
+                                   style="width:55px; border:none; text-align:center;">
+                            <button type="submit" style="display:none;"></button>
+                        </form>
+                    </td>
+
+                    <!-- REGULAR -->
+                    <td>{{ station.regular_capacity }}</td>
+                    <td class="text-{{ station.regular_color }} fw-bold">
+                        {{ station.regular }}
+                    </td>
+                    <td>{{ station.regular_vacancy }}</td>
+                    <td class="dispatch-cell">
+                        <form method="POST" action="{% url 'update_dispatch' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="station_id" value="{{ station.id }}">
+                            <input type="hidden" name="fuel_type" value="ULG">
+                            <input type="number"
+                                   class="dispatch-input"
+                                   data-station="{{ station.id }}"
+                                   data-fuel="ULG"
+                                   data-field="dispatch"
+                                   value="{{ station.regular_dispatch }}"
+                                   data-original="{{ station.regular_dispatch }}"
+                                   style="width:55px; border:none; border-right:1px solid #ccc; text-align:center;">
+                            <input type="number"
+                                   class="dispatch-input"
+                                   data-station="{{ station.id }}"
+                                   data-fuel="ULG"
+                                   data-field="dispatch2"
+                                   value="{{ station.regular_dispatch2 }}"
+                                   data-original="{{ station.regular_dispatch2 }}"
+                                   style="width:55px; border:none; text-align:center;">
+                            <button type="submit" style="display:none;"></button>
+                        </form>
+                    </td>
+
+                    <!-- DIESEL -->
+                    <td>{{ station.diesel_capacity }}</td>
+                    <td class="text-{{ station.diesel_color }} fw-bold">
+                        {{ station.diesel }}
+                    </td>
+                    <td>{{ station.diesel_vacancy }}</td>
+                    <td class="dispatch-cell">
+                        <form method="POST" action="{% url 'update_dispatch' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="station_id" value="{{ station.id }}">
+                            <input type="hidden" name="fuel_type" value="Diesel">
+                            <input type="number"
+                                   class="dispatch-input"
+                                   data-station="{{ station.id }}"
+                                   data-fuel="Diesel"
+                                   data-field="dispatch"
+                                   value="{{ station.diesel_dispatch }}"
+                                   data-original="{{ station.diesel_dispatch }}"
+                                   style="width:55px; border:none; border-right:1px solid #ccc; text-align:center;">
+                            <input type="number"
+                                   class="dispatch-input"
+                                   data-station="{{ station.id }}"
+                                   data-fuel="Diesel"
+                                   data-field="dispatch2"
+                                   value="{{ station.diesel_dispatch2 }}"
+                                   data-original="{{ station.diesel_dispatch2 }}"
+                                   style="width:55px; border:none; text-align:center;">
+                            <button type="submit" style="display:none;"></button>
+                        </form>
+                    </td>
+
+                    <td>{{ station.created_at|date:"M d, Y h:i A" }}</td>
+
+                </tr>
+                {% endfor %}
+
+                <!-- ✅ TOTAL ROW (FIXED) -->
+                <tr class="total-row" style="background:#1e293b; color:white; font-weight:bold; text-align:center;">
+                    <td></td>
+                    <td></td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="total">{{ area_dispatch_totals|get_item:area.grouper|get_item:"premium_total" }}</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="total">{{ area_dispatch_totals|get_item:area.grouper|get_item:"regular_total" }}</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="total">{{ area_dispatch_totals|get_item:area.grouper|get_item:"diesel_total" }}</td>
+
+                    <td></td>
+                </tr>
+
+            {% empty %}
+                <tr>
+                    <td colspan="16" class="text-center py-4">
+                        No data yet
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script>
+const CSRF_TOKEN = '{{ csrf_token }}';
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    function recalcAreaTotals() {
+        document.querySelectorAll('tr.area-row').forEach(function (areaRow) {
+            let premiumTotal = 0, regularTotal = 0, dieselTotal = 0;
+
+            let row = areaRow.nextElementSibling;
+            while (row && !row.classList.contains('area-row') && !row.classList.contains('total-row')) {
+                const inputs = row.querySelectorAll('input.dispatch-input');
+                // 6 inputs per row: P1, P2, R1, R2, D1, D2
+                if (inputs[0]) premiumTotal += parseFloat(inputs[0].value) || 0;
+                if (inputs[1]) premiumTotal += parseFloat(inputs[1].value) || 0;
+                if (inputs[2]) regularTotal += parseFloat(inputs[2].value) || 0;
+                if (inputs[3]) regularTotal += parseFloat(inputs[3].value) || 0;
+                if (inputs[4]) dieselTotal  += parseFloat(inputs[4].value) || 0;
+                if (inputs[5]) dieselTotal  += parseFloat(inputs[5].value) || 0;
+                row = row.nextElementSibling;
+            }
+
+            if (row && row.classList.contains('total-row')) {
+                const totalCells = row.querySelectorAll('td.total');
+                if (totalCells[0]) totalCells[0].textContent = premiumTotal || 0;
+                if (totalCells[1]) totalCells[1].textContent = regularTotal || 0;
+                if (totalCells[2]) totalCells[2].textContent = dieselTotal  || 0;
+            }
+        });
+    }
+
+    function saveDispatch(input) {
+        const newValue = input.value;
+        const original = input.dataset.original;
+        if (newValue === original) return;
+
+        const stationId = input.dataset.station;
+        const fuelType  = input.dataset.fuel;
+        const field     = input.dataset.field; // 'dispatch' o 'dispatch2'
+
+        fetch("{% url 'update_dispatch' %}", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': CSRF_TOKEN,
+            },
+            body: `station_id=${stationId}&fuel_type=${fuelType}&${field}=${newValue}`
+        })
+        .then(response => {
+            if (response.ok) {
+                input.dataset.original = newValue;
+                input.style.background = '#d1fae5';
+                setTimeout(() => input.style.background = '', 800);
+            }
+        })
+        .catch(() => {
+            input.style.background = '#fee2e2';
+            setTimeout(() => input.style.background = '', 800);
+        });
+    }
+
+    document.querySelectorAll('input.dispatch-input').forEach(function (input) {
+        input.addEventListener('input', recalcAreaTotals);
+        input.addEventListener('blur', function () { saveDispatch(this); });
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') { e.preventDefault(); this.blur(); }
+        });
+    });
+
+});
+</script>
+
+{% endblock %}

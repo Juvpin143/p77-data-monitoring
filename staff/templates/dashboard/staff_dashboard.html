@@ -1,0 +1,312 @@
+{% extends "main/base_staff.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ---------------------------------
+   HERO HEADER
+----------------------------------- */
+.hero-header {
+    width: 100%;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 40px 35px;
+    border-radius: 18px;
+    color: white;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+    margin-bottom: 35px;
+}
+
+.hero-content h1 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.hero-content .welcome {
+    font-size: 18px;
+    margin: 0;
+}
+
+.hero-content .station {
+    font-size: 30px;
+    margin-top: 6px;
+    font-weight: 800;
+    color: #e0e7ff;
+}
+
+.hero-subtitle {
+    font-size: 14px;
+    color: #cbd5f5;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    padding:24px;
+    border-radius:14px;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.12);
+    transition:0.25s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 26px rgba(0,0,0,0.18);
+}
+
+.card-content h3{
+    font-size:15px;
+    opacity:0.9;
+    margin-bottom:5px;
+}
+
+.fuel-value{
+    font-size:32px;
+    font-weight:800;
+}
+
+/* ICON */
+.card i{
+    font-size:34px;
+    opacity:0.9;
+}
+
+/* COLORS */
+.diesel{
+    background:linear-gradient(135deg,#facc15,#eab308);
+}
+
+.premium{
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+.regular{
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+}
+
+/* ---------------------------------
+   TABLE
+----------------------------------- */
+.section{
+    margin-top:40px;
+}
+
+.section h2{
+    font-size:20px;
+    margin-bottom:18px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    border:1px solid #eee;
+}
+
+th{
+    background:#0f1b2d;
+    color:white;
+    padding:14px;
+    text-align:left;
+}
+
+td{
+    padding:14px;
+    border-top:1px solid #eee;
+}
+
+tr:hover{
+    background:#f9fafc;
+}
+
+</style>
+
+
+<!-- HEADER -->
+<div class="hero-header">
+    <div class="hero-content">
+        <h1>Dashboard</h1>
+        <p class="welcome">
+            Welcome, <b>{{ request.user.username }}</b> 👋
+        </p>
+
+        <p class="hero-subtitle">
+            Manage Your Fuel Data Efficiently & Stay in Control 🚀
+        </p>
+
+        <p class="station">
+            Station:
+            {% for s in request.user.station.all %}
+                {{ s.name }}{% if not forloop.last %}, {% endif %}
+            {% empty %}
+                <span style="opacity:0.6;">Not assigned</span>
+            {% endfor %}
+        </p>
+    </div>
+</div>
+
+
+<!-- CARDS -->
+<div class="cards">
+
+    <!-- PREMIUM -->
+    <div class="card premium">
+        <div class="card-content">
+            <h3>Premium</h3>
+            <div class="fuel-value">
+                {{ premium_total }} L
+            </div>
+        </div>
+        <i class="fa-solid fa-gas-pump"></i>
+    </div>
+
+    <!-- REGULAR -->
+    <div class="card regular">
+        <div class="card-content">
+            <h3>Regular</h3>
+            <div class="fuel-value">
+                {{ regular_total }} L
+            </div>
+        </div>
+        <i class="fa-solid fa-gas-pump"></i>
+    </div>
+
+
+    <!-- DIESEL -->
+    <div class="card diesel">
+        <div class="card-content">
+            <h3>Diesel</h3>
+            <div class="fuel-value">
+                {{ diesel_total }} L
+            </div>
+        </div>
+        <i class="fa-solid fa-gas-pump"></i>
+    </div>
+
+</div>
+
+
+<!-- TABLE -->
+<div class="section">
+
+    <h2>Recent Reports</h2>
+
+    {% if recent_reports %}
+
+    <table>
+        <tr>
+            <th>Date & Time</th>
+            <th>Fuel</th>
+            <th>Tank</th>
+            <th>CM</th>
+            <th>Liters</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for r in recent_reports %}
+        <tr>
+
+            <td>{{ r.created_at|date:"M d, Y h:i A" }}</td>
+
+            <td>
+                {% if r.fuel_type == "Diesel" %}
+                    <span class="badge bg-warning">Diesel</span>
+                {% elif r.fuel_type == "Premium" %}
+                    <span class="badge bg-danger">Premium</span>
+                {% elif r.fuel_type == "ULG" %}
+                    <span class="badge bg-success text-dark">Regular</span>
+                {% endif %}
+            </td>
+
+            <td>
+                {% if r.tank1_liters|default:0 > 0 %}
+                    T1
+                {% elif r.tank2_liters|default:0 > 0 %}
+                    T2
+                {% elif r.tank3_liters|default:0 > 0 %}
+                    T3
+                {% endif %}
+            </td>
+
+            <td>
+                {% if r.tank1_liters > 0 %}
+                    {{ r.tank1_cm }}
+                {% elif r.tank2_liters > 0 %}
+                    {{ r.tank2_cm }}
+                {% elif r.tank3_liters > 0 %}
+                    {{ r.tank3_cm }}
+                {% endif %}
+            </td>
+
+            <td>
+                {% if r.tank1_liters > 0 %}{{ r.tank1_liters }}
+                {% elif r.tank2_liters > 0 %}{{ r.tank2_liters }}
+                {% elif r.tank3_liters > 0 %}{{ r.tank3_liters }}
+                {% else %}-{% endif %}
+            </td>
+
+            <td>
+                {% if r.is_read %}
+                    <span class="badge bg-success">Read ✅</span>
+                {% else %}
+                    <span class="badge bg-warning text-dark">Unread 🔔</span>
+                {% endif %}
+            </td>
+
+            <td>
+                <a href="{% url 'view_report' r.id %}" class="btn btn-sm btn-info">
+                    <i class="fa-solid fa-eye"></i>
+                </a>
+
+                <a href="{% url 'edit_report' r.id %}" class="btn btn-sm btn-warning">
+                    <i class="fa-solid fa-pen"></i>
+                </a>
+
+                <a href="{% url 'delete_report' r.id %}" class="btn btn-sm btn-danger">
+                    <i class="fa-solid fa-trash"></i>
+                </a>
+            </td>
+
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    {% else %}
+
+    <div style="
+        background:white;
+        padding:30px;
+        text-align:center;
+        border-radius:12px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    ">
+        <i class="fa-solid fa-inbox" style="font-size:30px;color:#9ca3af;"></i>
+        <p style="margin-top:10px;color:#6b7280;font-size:15px;">
+            No reports yet
+        </p>
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

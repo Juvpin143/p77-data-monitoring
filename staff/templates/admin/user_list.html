@@ -1,0 +1,184 @@
+{% extends "main/base_admin.html" %}
+{% block title %}User Management{% endblock %}
+
+{% block content %}
+<style>
+    .page-header {
+        width: 100%;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        padding: 40px 35px;
+        border-radius: 18px;
+        color: white;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+        margin-bottom: 35px;
+    }
+</style>
+
+<!-- ===== Header ===== -->
+<div class="container-fluid">
+    <div class="page-header shadow-sm">
+        <h1>👥 User Management</h1>
+
+        <p class="mb-1">
+            Hello, <b>{{ request.user.username }}</b> 👋
+        </p>
+
+        <p class="mb-1" style="font-size:15px; opacity:0.9;">
+            Manage Staff Accounts, Assign Stations & Monitor Access 🏪
+        </p>
+
+        <p class="mb-0" style="font-size:13px; opacity:0.75;">
+            System Control Panel — {{ users.count }} User{{ users.count|pluralize }} Registered
+        </p>
+    </div>
+  <!-- ===== Search & Filter ===== -->
+  <div class="card border-0 shadow-sm mb-4">
+    <div class="card-body">
+      <form method="get" class="row g-3 align-items-end">
+
+          <!-- Search -->
+          <div class="col-md-6">
+            <label class="form-label small text-muted">Search</label>
+            <input type="text"
+                   name="q"
+                   class="form-control"
+                   placeholder="Search username or email..."
+                   value="{{ request.GET.q }}">
+          </div>
+
+          <!-- Role -->
+          <div class="col-md-3">
+            <label class="form-label small text-muted">Role</label>
+            <select name="role" class="form-select">
+              <option value="">All Roles</option>
+              <option value="admin" {% if request.GET.role == "admin" %}selected{% endif %}>Admin</option>
+              <option value="viewer" {% if request.GET.role == "viewer" %}selected{% endif %}>Viewer</option>
+              <option value="staff" {% if request.GET.role == "staff" %}selected{% endif %}>Staff</option>
+            </select>
+          </div>
+
+          <!-- Button -->
+          <div class="col-md-3 d-grid">
+            <button class="btn btn-primary">
+              <i class="bi bi-funnel"></i> Filter
+            </button>
+          </div>
+
+        </form>
+    </div>
+  </div>
+
+  <!-- ===== User Table ===== -->
+  <div class="card border-0 shadow-sm">
+    <div class="card-body p-0">
+
+      <table class="table table-hover align-middle mb-0">
+        <thead class="custom-table-head">
+          <tr>
+            <th class="ps-4">User</th>
+            <th>Email</th>
+            <th>Fullname</th>
+            <th>Cluster</th>
+            <th>Station</th>
+            <th>Role</th>
+            <th>Joined</th>
+            <th>Status</th>
+            <th class="text-end pe-4">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for user in users %}
+          <tr>
+            <td class="ps-4">
+              <div class="fw-semibold">{{ user.username }}</div>
+              <small class="text-muted">ID: {{ user.id }}</small>
+            </td>
+
+            <td>{{ user.email }}</td>
+            <td>{{ user.full_name }}</td>
+            <td>
+              {% for s in user.station.all %}
+                {{ s.cluster }}<br>
+              {% empty %}
+                <span class="text-muted">—</span>
+              {% endfor %}
+            </td>
+
+            <td>
+              {% for s in user.station.all %}
+               {{ s.name }}
+              {% empty %}
+                <span class="text-muted">—</span>
+              {% endfor %}
+            </td>
+           <td>
+                {% if user.is_superuser %}
+                    <span class="badge bg-danger">Admin</span>
+                {% elif user.role == 'admin' %}
+                    <span class="badge bg-danger">Admin</span>
+                {% elif user.role == 'viewer' %}
+                    <span class="badge bg-warning">Viewer</span>
+                {% else %}
+                    <span class="badge bg-success">Staff</span>
+                {% endif %}
+            </td>
+
+            <td>
+              <small>{{ user.date_joined|date:"M d, Y" }}</small>
+            </td>
+
+            <td>
+              {% if user.is_active %}
+                <span class="badge bg-success-subtle text-success border border-success">
+                  Active
+                </span>
+              {% else %}
+                <span class="badge bg-danger-subtle text-danger border border-danger">
+                  Inactive
+                </span>
+              {% endif %}
+            </td>
+
+            <!-- Actions -->
+            <td class="text-end pe-4">
+                {% if user.role == 'admin' %}
+                    <span class="badge bg-secondary">Protected</span>
+                {% else %}
+                    <div class="d-flex gap-1 justify-content-end flex-nowrap">
+                        {% if not user.station.exists %}
+                            <a href="{% url 'adminpanel:assign_user' %}" class="btn btn-sm btn-outline-primary" style="font-size:11px; white-space:nowrap;">📌 Assign</a>
+                        {% else %}
+                            <a href="{% url 'adminpanel:assign_user' %}" class="btn btn-sm btn-outline-secondary" style="font-size:11px; white-space:nowrap;">🔄 Reassign</a>
+                        {% endif %}
+
+                        {% if user.is_active %}
+                            <a href="{% url 'adminpanel:deactivate' user.id %}?next={{ request.path }}" class="btn btn-sm btn-outline-warning" style="font-size:11px; white-space:nowrap;">Deactivate</a>
+                        {% else %}
+                            <a href="{% url 'adminpanel:activate' user.id %}?next={{ request.path }}" class="btn btn-sm btn-outline-success" style="font-size:11px; white-space:nowrap;">Activate</a>
+                        {% endif %}
+
+                        <a href="{% url 'adminpanel:delete_user' user.id %}"
+                           class="btn btn-sm btn-outline-danger"
+                           style="font-size:11px; white-space:nowrap;"
+                           onclick="return confirm('Delete {{ user.username }}?')">Delete</a>
+                    </div>
+                {% endif %}
+            </td>
+          </tr>
+          {% empty %}
+          <tr>
+            <td colspan="6" class="text-center py-4 text-muted">
+              No users found.
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+
+      </table>
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

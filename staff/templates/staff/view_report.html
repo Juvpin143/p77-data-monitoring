@@ -1,0 +1,119 @@
+{% extends "main/base_staff.html" %}
+
+{% block title %}View Report{% endblock %}
+
+{% block content %}
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+
+            <div class="card shadow-lg border-0">
+
+                <!-- HEADER -->
+                <div class="card-header text-white text-center"
+                     style="background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);">
+                    <h4>📝 Fuel Inventory Report</h4>
+                    <small>P77 Petroleum Distribution Inc.</small>
+                </div>
+
+                <!-- BODY -->
+                <div class="card-body" style="font-size:15px; line-height:1.8;">
+
+                    <div class="row">
+
+                        <!-- LEFT SIDE -->
+
+                        <div class="col-6">
+
+                            <p><strong>Date:</strong><br>
+                                {{ report.created_at|date:"F d, Y h:i A" }}
+                            </p>
+
+                            <p><strong>Fuel Type:</strong><br>
+                                {% if report.fuel_type == "Diesel" %}
+                                    <span class="badge bg-warning">Diesel</span>
+                                {% elif report.fuel_type == "Premium" %}
+                                    <span class="badge bg-danger">Premium</span>
+                                {% elif report.fuel_type == "ULG" %}
+                                    <span class="badge bg-success">Regular</span>
+                                {% endif %}
+                            </p>
+
+                            <p><strong>Status:</strong><br>
+                                {% if report.is_read %}
+                                    <span class="badge bg-success">Read</span>
+                                {% else %}
+                                    <span class="badge bg-warning text-dark">Unread</span>
+                                {% endif %}
+                            </p>
+
+                        </div>
+
+                        <!-- RIGHT SIDE -->
+                        <div class="col-6">
+
+                            {% if report.tank1_cm %}
+                                <p><strong>Tank:</strong><br>
+                                    T1
+                                </p>
+
+                                <p><strong>CM:</strong><br>
+                                    {{ report.tank1_cm }}
+                                </p>
+
+                                <p><strong>Liters:</strong><br>
+                                    {{ report.tank1_liters }}
+                                </p>
+
+                            {% elif report.tank2_cm %}
+                                <p><strong>Tank:</strong><br>
+                                    T2
+                                </p>
+
+                                <p><strong>CM:</strong><br>
+                                    {{ report.tank2_cm }}
+                                </p>
+
+                                <p><strong>Liters:</strong><br>
+                                    {{ report.tank2_liters }}
+                                </p>
+
+                            {% elif report.tank3_cm %}
+                                <p><strong>Tank:</strong><br>
+                                    T3
+                                </p>
+
+                                <p><strong>CM:</strong><br>
+                                    {{ report.tank3_cm }}
+                                </p>
+
+                                <p><strong>Liters:</strong><br>
+                                    {{ report.tank3_liters }}
+                                </p>
+                            {% endif %}
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- FOOTER -->
+                <div class="card-footer d-flex justify-content-between">
+                    <a href="{% url 'my_reports' %}" class="btn btn-secondary">
+                        ⬅ Back
+                    </a>
+
+                    <a href="{% url 'edit_report' report.id %}" class="btn btn-warning">
+                        ✏ Edit Report
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
