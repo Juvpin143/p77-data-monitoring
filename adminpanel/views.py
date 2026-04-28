@@ -282,7 +282,7 @@ def user_list(request):
 
     return render(request, 'admin/user_list.html', {"users": users, "role": role})
 
-@admin_required
+@full_admin_required
 def activate(request, user_id):
     user = get_object_or_404(CustomUser, id=user_id)
     if user.is_superuser:
@@ -293,7 +293,7 @@ def activate(request, user_id):
     messages.success(request, f"{user.username} has been activated!")
     return redirect(request.GET.get("next") or reverse('adminpanel:user_list'))
 
-@admin_required
+@full_admin_required
 def deactivate(request, user_id):
     user = get_object_or_404(CustomUser, id=user_id)
     if user.is_superuser:
