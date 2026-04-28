@@ -54,7 +54,10 @@ def register(request):
             token = default_token_generator.make_token(user)
             domain = request.get_host()
 
-            send_activation_email(user, domain, uid, token)
+            try:
+                send_activation_email(user, domain, uid, token)
+            except Exception:
+                pass
 
             messages.success(request, "Account created successfully, please check your email to activate your account.")
             return redirect('account:login')
