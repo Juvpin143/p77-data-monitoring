@@ -346,14 +346,14 @@
                     </td>
                     <td class="dispatch-col">
                         <input type="number" class="dispatch-input"
-                            data-station="{{ station.id }}" data-fuel="Regular" data-field="dispatch"
+                            data-station="{{ station.id }}" data-fuel="ULG" data-field="dispatch"
                             value="{% if station.regular_dispatch %}{{ station.regular_dispatch }}{% endif %}"
                             style="width:20px; border:none; text-align:center; background:transparent;"
                             {% if request.user.role == 'viewer' %}disabled{% endif %}>
                     </td>
                     <td class="dispatch-col">
                         <input type="number" class="dispatch-input"
-                            data-station="{{ station.id }}" data-fuel="Regular" data-field="dispatch2"
+                            data-station="{{ station.id }}" data-fuel="ULG" data-field="dispatch2"
                             value="{% if station.regular_dispatch2 %}{{ station.regular_dispatch2 }}{% endif %}"
                             style="width:20px; border:none; text-align:center; background:transparent;"
                             {% if request.user.role == 'viewer' %}disabled{% endif %}>
@@ -505,6 +505,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.querySelectorAll('input.dispatch-input').forEach(function (input) {
+        input.dataset.original = input.value;
         input.addEventListener('input', recalcAreaTotals);
         input.addEventListener('blur', function () { saveDispatch(this); });
         input.addEventListener('keydown', function (e) {
