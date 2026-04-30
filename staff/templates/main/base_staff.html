@@ -40,27 +40,22 @@ html, body{
 
 /* MOBILE VERSION (screens below 768px) */
 @media (max-width: 768px) {
-
-    /* sidebar becomes hidden on mobile */
     .sidebar {
-        left: -230px;                       /* hide it off-screen */
-        transition: 0.3s ease;
+        display: none !important;
     }
 
-    /* navbar full width (already OK) */
-    .navbar {
-        left: 0;
-        width: 100%;
-    }
-
-    /* main content full width din */
     .main {
-        margin-left: 0;
+        margin-left: 0 !important;
+        width: 100% !important;
     }
 
-    /* mobile padding */
+    .navbar {
+        left: 0 !important;
+        width: 100% !important;
+    }
+
     .content {
-        padding: 15px 20px;
+        padding: 15px !important;
     }
 }
 /* Global Layout */
@@ -288,6 +283,55 @@ body{
     color: #ff4d5a;
 }
 
+/* HAMBURGER BUTTON */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* OVERLAY */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block !important;
+    }
+
+    .sidebar {
+        left: -230px !important;
+        transition: 0.3s ease;
+        z-index: 1001;
+    }
+
+    .sidebar.open {
+        left: 0 !important;
+    }
+
+    .overlay.open {
+        display: block !important;
+    }
+
+    .main {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    .content {
+        padding: 15px !important;
+    }
+}
+
 </style>
 
 </head>
@@ -302,6 +346,9 @@ body{
         <div class="nav-left">
             <div class="logo-title">
                 <img src="{% static 'images/p77_logo.png' %}" alt="P77 Logo" class="nav-logo">
+                <button class="hamburger" id="hamburgerBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
                 <div class="text-group">
                     <h3>Dashboard</h3>
                     <div class="company">
@@ -376,6 +423,22 @@ body{
             {% endblock %}
         </div>
     </div>
+
+<script>
+const hamburger = document.getElementById('hamburgerBtn');
+const sidebar = document.querySelector('.sidebar');
+const overlay = document.getElementById('overlay');
+
+hamburger.addEventListener('click', function() {
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('open');
+});
+
+overlay.addEventListener('click', function() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('open');
+});
+</script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
