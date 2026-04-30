@@ -483,6 +483,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const fuelType  = input.dataset.fuel;
         const field     = input.dataset.field; // 'dispatch' o 'dispatch2'
 
+         const sendValue = newValue === '' ? '0' : newValue;
+
         fetch("{% url 'adminpanel:update_dispatch' %}", {
             method: 'POST',
             headers: {
