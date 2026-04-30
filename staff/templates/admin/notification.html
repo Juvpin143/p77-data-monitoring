@@ -48,7 +48,7 @@
             {{ notifications.count }} Total Notification{{ notifications.count|pluralize }}
         </span>
         {% if unread_count > 0 %}
-        <form method="POST" action="{% url 'mark_all_as_read' %}">
+        <form method="POST" action="{% url 'adminpanel:mark_all_as_read' %}">
             {% csrf_token %}
             <button type="submit" class="btn btn-sm btn-outline-primary">
                 ✅ Mark All as Read
@@ -77,7 +77,7 @@
                     <div class="d-flex align-items-center gap-2 ms-3">
                         {% if not notif.is_read %}
                             <span class="badge bg-warning text-dark">New 🔔</span>
-                            <form method="POST" action="{% url 'mark_as_read' notif.id %}">
+                            <form method="POST" action="{% url 'adminpanel:mark_as_read' notif.id %}">
                                 {% csrf_token %}
                                 <button type="submit" class="btn btn-sm btn-outline-primary"
                                         style="font-size:11px; white-space:nowrap;">
