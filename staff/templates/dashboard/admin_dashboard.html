@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 row = row.nextElementSibling;
             }
 
-            // ✅ Per-area total (nasa ilalim ng bawat cluster)
+            // Per-area total (nasa ilalim ng bawat cluster)
             if (row && row.classList.contains('total-row')) {
                 row.querySelector('.total-p1').textContent = p1;
                 row.querySelector('.total-p2').textContent = p2;
@@ -457,13 +457,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 row.querySelector('.total-d2').textContent = d2;
             }
 
-            // ✅ I-add sa grand total
+            // I-add sa grand total
             grandP1 += p1; grandP2 += p2;
             grandR1 += r1; grandR2 += r2;
             grandD1 += d1; grandD2 += d2;
         });
 
-        // ✅ Overall Grand Total sa thead
+
         document.querySelector('.grand-p1').textContent = grandP1;
         document.querySelector('.grand-p2').textContent = grandP2;
         document.querySelector('.grand-r1').textContent = grandR1;
@@ -475,15 +475,16 @@ document.addEventListener('DOMContentLoaded', function () {
     recalcAreaTotals();
 
     function saveDispatch(input) {
-        const newValue = input.value;
+        const newValue = input.value.trim();
         const original = input.dataset.original;
         if (newValue === original) return;
 
         const stationId = input.dataset.station;
         const fuelType  = input.dataset.fuel;
-        const field     = input.dataset.field; // 'dispatch' o 'dispatch2'
+        const field     = input.dataset.field;
 
-         const sendValue = newValue === '' ? '0' : newValue;
+        // ✅ Kung empty, i-send as 0
+        const sendValue = newValue === '' ? '0' : newValue;
 
         fetch("{% url 'adminpanel:update_dispatch' %}", {
             method: 'POST',
@@ -491,7 +492,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'X-CSRFToken': CSRF_TOKEN,
             },
-            body: `station_id=${stationId}&fuel_type=${fuelType}&${field}=${newValue}`
+            body: `station_id=${stationId}&fuel_type=${fuelType}&${field}=${sendValue}`
         })
         .then(response => {
             if (response.ok) {
