@@ -486,7 +486,7 @@ body{
     <div class="main">
         <div class="content">
             {% if messages %}
-            <div class="position-fixed start-50 translate-middle-x p-3" style="top: 70px; z-index: 1080;" style="z-index: 1080;">
+            <div class="position-fixed p-3" style="top: 70px; left: 50%; transform: translateX(-50%); z-index: 1080; width: 90%; max-width: 350px;">
               {% for message in messages %}
                 <div class="toast align-items-center border-0 text-white
                             {% if message.tags == 'success' %}bg-success
