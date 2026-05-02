@@ -39,14 +39,11 @@
     }
 
 
-    .t1-row input {
+    .t-row input {
         border: 2px solid #ffc107;
         font-weight: bold;
     }
 
-    .t-row input {
-        font-weight: bold;
-    }
 </style>
 
 <div class="container-fluid mt-4">
@@ -90,7 +87,7 @@
                                         </thead>
                                         <tbody>
                                             {% if "T1" in premium_tank %}
-                                            <tr class="t1-row">
+                                            <tr class="t-row">
                                                 <td><strong>T1</strong></td>
                                                 <td><input type="number" name="premium_t1_cm" class="form-control"
                                                     value="{% if report.fuel_type == 'Premium' %}{{ report.tank1_cm }}{% endif %}"></td>
@@ -146,7 +143,7 @@
                                         </thead>
                                         <tbody>
                                             {% if "T1" in regular_tank %}
-                                            <tr class="t1-row">
+                                            <tr class="t-row">
                                                 <td><strong>T1</strong></td>
                                                 <td><input type="number" name="regular_t1_cm" class="form-control"
                                                     value="{% if report.fuel_type == 'ULG' %}{{ report.tank1_cm }}{% endif %}"></td>
@@ -202,7 +199,7 @@
                                         </thead>
                                         <tbody>
                                             {% if "T1" in diesel_tank %}
-                                            <tr class="t1-row">
+                                            <tr class="t-row">
                                                 <td><strong>T1</strong></td>
                                                 <td><input type="number" name="diesel_t1_cm" class="form-control"
                                                     value="{% if report.fuel_type == 'Diesel' %}{{ report.tank1_cm }}{% endif %}"></td>
