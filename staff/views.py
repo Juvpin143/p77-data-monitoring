@@ -310,6 +310,7 @@ def edit_report(request, id):
         premium_tank = regular_tank = diesel_tank = allowed_tanks
 
     context = {
+        "report": report,
         "allowed_tanks": allowed_tanks,
         "premium_tank": premium_tank,
         "regular_tank": regular_tank,
