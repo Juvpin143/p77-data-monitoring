@@ -269,20 +269,53 @@ def edit_report(request, id):
     stations = request.user.station.all()
 
     allowed_tanks = set()
+    premium_tank = set()
+    regular_tank = set()
+    diesel_tank = set()
 
     for s in stations:
         name = s.name.strip()
         if name.endswith("T1"):
+            tank_key = "T1"
             allowed_tanks.add("T1")
-        if name.endswith("T2"):
+        elif name.endswith("T2"):
+            tank_key = "T2"
             allowed_tanks.add("T2")
-        if name.endswith("T3"):
-            allowed_tanks.add("T3")
+            tank_key = "T3"
+        elif name.endswith("T3"):
+            tank_key = "T1"
+            allowed_tanks.add("T1")
+
+        if s.premium_capacity:
+            has_premium = True
+            allowed_tanks.add("Premium")
+        if s.regular_capacity:
+            has_regular = True
+            allowed_tanks.add("Regular")
+        if s.diesel_capacity:
+            has_diesel = True
+            allowed_tanks.add("Diesel")
 
     if not allowed_tanks:
         allowed_tanks = {"T1"}
 
-    return render(request, "staff/edit_report.html", {"report": report, "allowed_tanks": allowed_tanks})
+    if not any([has_premium, has_regular, has_diesel]):
+        has_premium = has_regular = has_diesel = True
+        premium_tank = regular_tank = diesel_tank = allowed_tanks
+
+    context = {
+        "allowed_tanks": allowed_tanks,
+        "premium_tank": premium_tank,
+        "regular_tank": regular_tank,
+        "diesel_tank": diesel_tank,
+        "has_premium": has_premium,
+        "has_regular": has_regular,
+        "has_diesel": has_diesel,
+
+    }
+
+
+    return render(request, "staff/edit_report.html", context)
 
 @login_required
 def delete_report(request, id):
