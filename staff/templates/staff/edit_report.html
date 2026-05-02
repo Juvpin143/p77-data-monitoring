@@ -71,6 +71,7 @@
                     <div class="row">
 
                         <!-- PREMIUM -->
+                        {% if has_premium %}
                         <div class="col-md-4">
                             <div class="card h-100 border-danger">
 
@@ -88,7 +89,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {% if "T1" in allowed_tanks %}
+                                            {% if "T1" in premium_tank %}
                                             <tr class="t1-row">
                                                 <td><strong>T1</strong></td>
                                                 <td><input type="number" name="premium_t1_cm" class="form-control"
@@ -98,7 +99,7 @@
                                             </tr>
                                             {% endif %}
 
-                                            {% if "T2" in allowed_tanks %}
+                                            {% if "T2" in premium_tank %}
                                             <tr class="t-row">
                                                 <td><strong>T2</strong></td>
                                                 <td><input type="number" name="premium_t2_cm" class="form-control"
@@ -108,7 +109,7 @@
                                             </tr>
                                             {% endif %}
 
-                                            {% if "T3" in allowed_tanks %}
+                                            {% if "T3" in premium_tank %}
                                             <tr class="t-row">
                                                 <td><strong>T3</strong></td>
                                                 <td><input type="number" name="premium_t3_cm" class="form-control"
@@ -123,8 +124,10 @@
 
                             </div>
                         </div>
+                        {% endif %}
 
                         <!-- REGULAR -->
+                        {% if has_regular %}
                         <div class="col-md-4">
                             <div class="card h-100 border-success">
 
@@ -142,7 +145,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {% if "T1" in allowed_tanks %}
+                                            {% if "T1" in regular_tank %}
                                             <tr class="t1-row">
                                                 <td><strong>T1</strong></td>
                                                 <td><input type="number" name="regular_t1_cm" class="form-control"
@@ -152,7 +155,7 @@
                                             </tr>
                                             {% endif %}
 
-                                            {% if "T2" in allowed_tanks %}
+                                            {% if "T2" in regular_tank %}
                                             <tr class="t-row">
                                                 <td><strong>T2</strong></td>
                                                 <td><input type="number" name="regular_t2_cm" class="form-control"
@@ -162,7 +165,7 @@
                                             </tr>
                                             {% endif %}
 
-                                            {% if "T3" in allowed_tanks %}
+                                            {% if "T3" in regular_tank %}
                                             <tr class="t-row">
                                                 <td><strong>T3</strong></td>
                                                 <td><input type="number" name="regular_t3_cm" class="form-control"
@@ -177,8 +180,10 @@
 
                             </div>
                         </div>
+                        {% endif %}
 
                         <!-- DIESEL -->
+                        {% if has_diesel %}
                         <div class="col-md-4">
                             <div class="card h-100 border-warning">
 
@@ -196,7 +201,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {% if "T1" in allowed_tanks %}
+                                            {% if "T1" in diesel_tank %}
                                             <tr class="t1-row">
                                                 <td><strong>T1</strong></td>
                                                 <td><input type="number" name="diesel_t1_cm" class="form-control"
@@ -206,7 +211,7 @@
                                             </tr>
                                             {% endif %}
 
-                                            {% if "T2" in allowed_tanks %}
+                                            {% if "T2" in diesel_tank %}
                                             <tr class="t-row">
                                                 <td><strong>T2</strong></td>
                                                 <td><input type="number" name="diesel_t2_cm" class="form-control"
@@ -216,7 +221,7 @@
                                             </tr>
                                             {% endif %}
 
-                                            {% if "T3" in allowed_tanks %}
+                                            {% if "T3" in diesel_tank %}
                                             <tr class="t-row">
                                                 <td><strong>T3</strong></td>
                                                 <td><input type="number" name="diesel_t3_cm" class="form-control"
@@ -231,6 +236,7 @@
 
                             </div>
                         </div>
+                        {% endif %}
 
                     </div>
 

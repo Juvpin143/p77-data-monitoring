@@ -269,6 +269,10 @@ def edit_report(request, id):
     stations = request.user.station.all()
 
     allowed_tanks = set()
+    has_premium = False
+    has_regular = False
+    has_diesel = False
+
     premium_tank = set()
     regular_tank = set()
     diesel_tank = set()
@@ -281,20 +285,22 @@ def edit_report(request, id):
         elif name.endswith("T2"):
             tank_key = "T2"
             allowed_tanks.add("T2")
-            tank_key = "T3"
         elif name.endswith("T3"):
+            tank_key = "T3"
+            allowed_tanks.add("T3")
+        else:
             tank_key = "T1"
             allowed_tanks.add("T1")
 
         if s.premium_capacity:
             has_premium = True
-            allowed_tanks.add("Premium")
+            premium_tank.add(tank_key)
         if s.regular_capacity:
             has_regular = True
-            allowed_tanks.add("Regular")
+            regular_tank.add(tank_key)
         if s.diesel_capacity:
             has_diesel = True
-            allowed_tanks.add("Diesel")
+            diesel_tank.add(tank_key)
 
     if not allowed_tanks:
         allowed_tanks = {"T1"}
