@@ -265,7 +265,7 @@ def edit_report(request, id):
         messages.success(request, "Updated successfully!")
         return redirect("my_reports")
 
-    # 🔥 FIX: GET request - gamitin ang parehong logic sa submit_inventory
+
     stations = request.user.station.all()
 
     allowed_tanks = set()

@@ -75,7 +75,7 @@ class Notification(models.Model):
     )
     notif_type = models.CharField(max_length=50, choices=TYPE_CHOICES)
     message = models.TextField()
-    is_read = models.BooleanField(default=False)  # ✅ para malaman kung nabasa na
+    is_read = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:

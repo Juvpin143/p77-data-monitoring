@@ -31,7 +31,7 @@ def register(request):
             username = form.cleaned_data.get('username')
             email = form.cleaned_data.get('email')
 
-            # 🔥 Delete expired unactivated accounts with same username or email
+            #  Delete expired unactivated accounts with same username or email
             User.objects.filter(
                 username=username,
                 is_active=False,
