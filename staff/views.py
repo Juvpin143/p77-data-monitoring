@@ -63,7 +63,7 @@ def submit_inventory(request):
             elif name.endswith("T3"):
                 station_map["T3"] = s
 
-        # 🔥 FIX: Kung isa lang ang station at walang T1/T2/T3 sa name,
+        # FIX: Kung isa lang ang station at walang T1/T2/T3 sa name,
         # i-assign siya bilang T1 by default
         if not station_map and stations.count() == 1:
             station_map["T1"] = stations.first()
