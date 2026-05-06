@@ -475,44 +475,37 @@ body{
             All Reports
         </a>
 
-
-
         <a href="{% url 'account:logout' %}"
            class="logout-link {% if request.resolver_match.url_name == 'logout' %}active{% endif %}">
            <i class="fa-solid fa-right-from-bracket"></i> Logout
         </a>
     </div>
 
+    <!-- TOAST - CENTERED ALWAYS -->
+    {% if messages %}
+    <div style="position: fixed; top: 70px; left: 50vw; transform: translateX(-50%); z-index: 1080; width: 280px;">
+        {% for message in messages %}
+        <div class="toast align-items-center border-0 text-white
+                    {% if message.tags == 'success' %}bg-success
+                    {% elif message.tags == 'error' or message.tags == 'danger' %}bg-danger
+                    {% elif message.tags == 'warning' %}bg-warning text-dark
+                    {% elif message.tags == 'info' %}bg-info
+                    {% else %}bg-secondary{% endif %}"
+             role="alert" aria-live="assertive" aria-atomic="true"
+             data-bs-delay="3000">
+          <div class="d-flex">
+            <div class="toast-body">{{ message }}</div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                    data-bs-dismiss="toast"></button>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
     <!-- MAIN CONTENT -->
     <div class="main">
         <div class="content">
-            {% if messages %}
-            <div style="position: fixed; top: 70px; left: 0; right: 0; z-index: 1080; display: flex; justify-content: center; pointer-events: none;">
-            <div style="pointer-events: all; width: 90%; max-width: 350px;">
-              {% for message in messages %}
-                <div class="toast align-items-center border-0 text-white
-                            {% if message.tags == 'success' %}bg-success
-                            {% elif message.tags == 'error' or message.tags == 'danger' %}bg-danger
-                            {% elif message.tags == 'warning' %}bg-warning text-dark
-                            {% elif message.tags == 'info' %}bg-info
-                            {% else %}bg-secondary
-                            {% endif %}"
-                     role="alert" aria-live="assertive" aria-atomic="true"
-                     data-bs-delay="3000">
-
-                  <div class="d-flex">
-                    <div class="toast-body">
-                      {{ message }}
-                    </div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto"
-                            data-bs-dismiss="toast"></button>
-                  </div>
-
-                </div>
-              {% endfor %}
-            </div>
-            </div>
-            {% endif %}
             {% block content %}
             {% endblock %}
         </div>
