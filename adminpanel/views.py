@@ -202,7 +202,7 @@ def update_dispatch(request):
     return JsonResponse({'status': 'ok'})
 
 @login_required
-@admin_required
+@full_admin_required
 def add_cluster(request):
     if request.method == 'POST':
         form = ClusterForm(request.POST)
